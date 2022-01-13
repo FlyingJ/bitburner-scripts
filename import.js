@@ -1,7 +1,7 @@
 let config = {
   folder: 'scripts',
-  rootUrl: 'https://raw.githubusercontent.com/ChaelCodes/bitburner-scripts/main/',
-  serverPrefix: 'ChaelPwns',
+  rootUrl: 'https://raw.githubusercontent.com/FlyingJ/bitburner-scripts/main/',
+  serverPrefix: 'j4ys3rv',
 };
 /*
  * This will import all files listed in importFiles.
