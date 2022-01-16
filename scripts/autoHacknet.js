@@ -1,37 +1,39 @@
-export function isEconomical(ns) {
-	const MAXWAIT = 43200; // 12 hours in seconds
-	const maxNodeProduction = 9171 * ns.getHacknetMultipliers().production; // HN node earns 9171 $/s maxed out
-
-	if (ns.hacknet.getPurchaseNodeCost() / maxNodeProduction < MAXWAIT) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-export function isAffordable(ns) {
-	let cost = ns.hacknet.getPurchaseNodeCost();
-	if (cost < ns.getServerMoneyAvailable("home")) {
-		return true;
-	} else {
-		return false;
-	}
-}
+const TICK = 3000;
+const MAXWAIT = 43200; // 12 hours in seconds
+const BASEMAXEARNINGS = 9171;
 
 /** @param {NS} ns **/
 export async function main(ns) {
-
 	ns.disableLog("getServerMoneyAvailable");
 	ns.disableLog("sleep");
 
-	const TICK = 1000;
-	while (isEconomical(ns)) {
-		while (!isAffordable(ns)) {
-			await ns.sleep(TICK);
-		}
-		let node = ns.hacknet.purchaseNode();
-		ns.tprint("Purchased node designated hacknet-node-" + node);
-		ns.run("/scripts/upgradeHacknetNode.js", 1, node);
+	let cost = ns.hacknet.getPurchaseNodeCost();
+	while (canRecoup(ns, cost)) {
+		while (!affordable(ns, cost)) { await ns.sleep(TICK); }
+		buyNode(ns);
+		cost = ns.hacknet.getPurchaseNodeCost();
 	}
-	ns.tprint("Not economical to purchase additional hacknet nodes");
+
+	ns.print("Additional hacknet nodes cannot break even");
 }
+
+function canRecoup(ns, cost) {
+	// will a fully upgraded node be able to pay for itself within 12 hours?
+	const maxEarnings = BASEMAXEARNINGS * hacknetMultProd(ns);
+
+	if (breakEvenTime(cost, maxEarnings) < MAXWAIT) return true;
+	return false;
+}
+
+function hacknetMultProd(ns) { return ns.getHacknetMultipliers().production; }
+
+function breakEvenTime(cost, earnings) { return cost / earnings; }
+
+function affordable(ns, cost) {
+	if (cost < moneyAvailable(ns)) return true;
+	return false;
+}
+
+function moneyAvailable(ns) { return ns.getServerMoneyAvailable('home'); }
+
+function buyNode(ns) { ns.print("Purchased hacknet-node-" + ns.hacknet.purchaseNode()); }
