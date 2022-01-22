@@ -1,52 +1,31 @@
 export function upgradesAvailable(ns, node) {
-	if (levelAvailable(ns, node) || ramAvailable(ns, node) || coreAvailable(ns, node)) {
-		return true;
-	}
-	return false;
+	return (levelAvailable(ns, node) || ramAvailable(ns, node) || coreAvailable(ns, node)) ? true : false;
 }
 
-function levelAvailable(ns, node) {
-	if(isFinite(ns.hacknet.getLevelUpgradeCost(node, 1))) return true;
-	return false;
-}
-
-function ramAvailable(ns, node) {
-		if(isFinite(ns.hacknet.getRamUpgradeCost(node, 1))) return true;
-	return false;
-}
-
-function coreAvailable(ns, node) {
-		if(isFinite(ns.hacknet.getCoreUpgradeCost(node, 1))) return true;
-	return false;
-}
+function levelAvailable(ns, node) { return isFinite(ns.hacknet.getLevelUpgradeCost(node, 1)) ? true : false; }
+function ramAvailable(ns, node) { return isFinite(ns.hacknet.getRamUpgradeCost(node, 1)) ? true : false; }
+function coreAvailable(ns, node) { return isFinite(ns.hacknet.getCoreUpgradeCost(node, 1)) ? true : false; }
 
 export function leastCostlyUpgrade(ns, node) {
 	let minCost = ns.hacknet.getLevelUpgradeCost(node, 1);
-	let upgradeType = "level";
+	let upgrade = "level";
 
 	let ramCost = ns.hacknet.getRamUpgradeCost(node, 1);
 	if (ramCost < minCost) {
 		minCost = ramCost;
-		upgradeType = "ram";
+		upgrade = "ram";
 	}
 
 	var coreCost = ns.hacknet.getCoreUpgradeCost(node, 1);
 	if (coreCost < minCost) {
 		minCost = coreCost;
-		upgradeType = "core";
+		upgrade = "core";
 	}
 
-	if (isFinite(minCost)) {
-		return upgradeType;
-	} else {
-		return null;
-	}
+	return isFinite(minCost) ? upgrade : null;
 }
 
-export function isAffordable(ns, node, upgrade) {
-	if (cost(ns, node, upgrade) < ns.getServerMoneyAvailable("home")) { return true; }
-	return false;
-}
+export function isAffordable(ns, node, upgrade) { return cost(ns, node, upgrade) < availableFunds(ns) ? true : false; }
 
 function cost(ns, node, upgrade) {
 	switch (upgrade) {
@@ -57,6 +36,10 @@ function cost(ns, node, upgrade) {
 		default:
 			return ns.hacknet.getLevelUpgradeCost(node, 1);
 	}
+}
+
+function availableFunds(ns) {
+	return ns.getServerMoneyAvailable('home');
 }
 
 export function buyUpgrade(ns, node, upgrade) {
