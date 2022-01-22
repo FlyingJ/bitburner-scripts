@@ -31,31 +31,6 @@ function buyNode(ns) { ns.tprint('Purchased hacknet-node-' + ns.hacknet.purchase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-function cost(ns, node, upgrade) {
-	switch (upgrade) {
-		case "ram":
-			return ns.hacknet.getRamUpgradeCost(node, 1);
-		case "core":
-			return ns.hacknet.getCoreUpgradeCost(node, 1);
-		default:
-			return ns.hacknet.getLevelUpgradeCost(node, 1);
-	}
-}
-
-function buyUpgrade(ns, node, upgrade) {
-	// purchase least expensive upgrade type
-	switch (upgrade) {
-		case "ram":
-			ns.hacknet.upgradeRam(node, 1);
-			break;
-		case "core":
-			ns.hacknet.upgradeCore(node, 1);
-			break;
-		default:
-			ns.hacknet.upgradeLevel(node, 1);
-			break;
-	}
-}
 
 /** @param {NS} ns **/
 export async function main(ns) {
@@ -91,6 +66,9 @@ function ramAvailable(ns, node) { return isFinite(ns.hacknet.getRamUpgradeCost(n
 function coreAvailable(ns, node) { return isFinite(ns.hacknet.getCoreUpgradeCost(node, 1)) ? true : false; }
 
 function leastCostlyUpgrade(ns, node) {
+	let minCost = 0;
+	
+	cost(ns, node, upgrade);
 	let minCost = ns.hacknet.getLevelUpgradeCost(node, 1);
 	let upgrade = "level";
 
@@ -107,4 +85,30 @@ function leastCostlyUpgrade(ns, node) {
 	}
 
 	return isFinite(minCost) ? upgrade, minCost : null, null;
+}
+
+function cost(ns, node, upgrade) {
+	switch (upgrade) {
+		case "ram":
+			return ns.hacknet.getRamUpgradeCost(node, 1);
+		case "core":
+			return ns.hacknet.getCoreUpgradeCost(node, 1);
+		default:
+			return ns.hacknet.getLevelUpgradeCost(node, 1);
+	}
+}
+
+function buyUpgrade(ns, node, upgrade) {
+	// purchase least expensive upgrade type
+	switch (upgrade) {
+		case "ram":
+			ns.hacknet.upgradeRam(node, 1);
+			break;
+		case "core":
+			ns.hacknet.upgradeCore(node, 1);
+			break;
+		default:
+			ns.hacknet.upgradeLevel(node, 1);
+			break;
+	}
 }
