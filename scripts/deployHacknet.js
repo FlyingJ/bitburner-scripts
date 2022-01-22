@@ -1,99 +1,35 @@
 const TICK = 3000;
-const MAXWAIT = 43200; // 12 hours in seconds
+const MAXWAIT = 3600 * 12; // 12 hours in seconds
 const BASEMAXEARNINGS = 9171;
 
 /** @param {NS} ns **/
 export async function main(ns) {
-	ns.disableLog("getServerMoneyAvailable");
-	ns.disableLog("sleep");
+	ns.disableLog('getServerMoneyAvailable');
+	ns.disableLog('sleep');
 
-	// as I understand, hacknet multipliers only change with augmentation
-	// only need to calculate max node earnings once
-	const maxNodeEarnings = BASEMAXEARNINGS * hacknetMultProd(ns);
-
+	const maxEarnings = BASEMAXEARNINGS * hacknetMultProd(ns);
 	let cost = ns.hacknet.getPurchaseNodeCost();
-	while (canRecoup(ns, cost, maxNodeEarnings)) {
+	while (canRecoup(ns, cost, maxEarnings)) {
 		while (!affordable(ns, cost)) { await ns.sleep(TICK); }
 		buyNode(ns);
 		cost = ns.hacknet.getPurchaseNodeCost();
 	}
 
-	ns.print("Additional hacknet nodes cannot break even");
+	ns.tprint('Additional hacknet nodes cannot break even');
 }
 
+function canRecoup(ns, cost, maxEarnings) { return breakEvenTime(cost, maxEarnings) < MAXWAIT ? true : false; }
 function hacknetMultProd(ns) { return ns.getHacknetMultipliers().production; }
-
-function canRecoup(ns, cost, maxEarnings) {
-	return (breakEvenTime(cost, maxEarnings) < MAXWAIT) ? true : false;
-}
-
 function breakEvenTime(cost, earnings) { return cost / earnings; }
-
-function affordable(ns, cost) {
-	if (cost < moneyAvailable(ns)) return true;
-	return false;
-}
-
+function affordable(ns, cost) { return cost < moneyAvailable(ns) ? true : false; }
 function moneyAvailable(ns) { return ns.getServerMoneyAvailable('home'); }
-
-function buyNode(ns) { ns.print("Purchased hacknet-node-" + ns.hacknet.purchaseNode()); }
-
+function buyNode(ns) { ns.tprint('Purchased hacknet-node-' + ns.hacknet.purchaseNode()); }
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-
-export function upgradesAvailable(ns, node) {
-	if (levelAvailable(ns, node) || ramAvailable(ns, node) || coreAvailable(ns, node)) {
-		return true;
-	}
-	return false;
-}
-
-function levelAvailable(ns, node) {
-	if(isFinite(ns.hacknet.getLevelUpgradeCost(node, 1))) return true;
-	return false;
-}
-
-function ramAvailable(ns, node) {
-		if(isFinite(ns.hacknet.getRamUpgradeCost(node, 1))) return true;
-	return false;
-}
-
-function coreAvailable(ns, node) {
-		if(isFinite(ns.hacknet.getCoreUpgradeCost(node, 1))) return true;
-	return false;
-}
-
-export function leastCostlyUpgrade(ns, node) {
-	let minCost = ns.hacknet.getLevelUpgradeCost(node, 1);
-	let upgradeType = "level";
-
-	let ramCost = ns.hacknet.getRamUpgradeCost(node, 1);
-	if (ramCost < minCost) {
-		minCost = ramCost;
-		upgradeType = "ram";
-	}
-
-	var coreCost = ns.hacknet.getCoreUpgradeCost(node, 1);
-	if (coreCost < minCost) {
-		minCost = coreCost;
-		upgradeType = "core";
-	}
-
-	if (isFinite(minCost)) {
-		return upgradeType;
-	} else {
-		return null;
-	}
-}
-
-export function isAffordable(ns, node, upgrade) {
-	if (cost(ns, node, upgrade) < moneyAvailable(ns)) { return true; }
-	return false;
-}
 
 function cost(ns, node, upgrade) {
 	switch (upgrade) {
@@ -106,7 +42,7 @@ function cost(ns, node, upgrade) {
 	}
 }
 
-export function buyUpgrade(ns, node, upgrade) {
+function buyUpgrade(ns, node, upgrade) {
 	// purchase least expensive upgrade type
 	switch (upgrade) {
 		case "ram":
@@ -123,25 +59,52 @@ export function buyUpgrade(ns, node, upgrade) {
 
 /** @param {NS} ns **/
 export async function main(ns) {
-	const TICK = 3000;
-	let node = ns.args[0];
+	await upgradeNode(ns, ns.args[0]);
+}
 
-	ns.disableLog("sleep");
-	ns.disableLog("getServerMoneyAvailable")
+async function upgradeNode(ns, node) {
+	ns.disableLog('sleep');
+	ns.disableLog('getServerMoneyAvailable')
 
-	if (!ns.hacknet.getNodeStats(node)) {
-		ns.print("Node designated " + node + " does not exist");
+	if (!exists(ns, node)) {
+		ns.tprint('hacknet-node-' + node + ' does not exist');
 		return;
 	}
 
-	ns.tprint("Upgrading hacknet-node-" + node);
+	ns.tprint('Upgrading hacknet-node-' + node);
 	while (upgradesAvailable(ns, node)) {
-		let upgrade = leastCostlyUpgrade(ns, node);
-		// stall for cash
-		while (!isAffordable(ns, node, upgrade)) {
-			await ns.sleep(TICK);
-		}
+		let upgrade, cost = leastCostlyUpgrade(ns, node);
+		while (!affordable(ns, cost)) { await ns.sleep(TICK); }
 		buyUpgrade(ns, node, upgrade);
 	}
-	ns.tprint("hacknet-node-" + node + " fully upgraded");
+	ns.tprint('hacknet-node-' + node + ' fully upgraded');
+}
+
+function exists(ns, node) { return ns.hacknet.getNodeStats(node) ? true : false; }
+
+function upgradesAvailable(ns, node) {
+	return (levelAvailable(ns, node) || ramAvailable(ns, node) || coreAvailable(ns, node)) ? true : false;
+}
+
+function levelAvailable(ns, node) { return isFinite(ns.hacknet.getLevelUpgradeCost(node, 1)) ? true : false; }
+function ramAvailable(ns, node) { return isFinite(ns.hacknet.getRamUpgradeCost(node, 1)) ? true : false; }
+function coreAvailable(ns, node) { return isFinite(ns.hacknet.getCoreUpgradeCost(node, 1)) ? true : false; }
+
+function leastCostlyUpgrade(ns, node) {
+	let minCost = ns.hacknet.getLevelUpgradeCost(node, 1);
+	let upgrade = "level";
+
+	let ramCost = ns.hacknet.getRamUpgradeCost(node, 1);
+	if (ramCost < minCost) {
+		minCost = ramCost;
+		upgrade = "ram";
+	}
+
+	var coreCost = ns.hacknet.getCoreUpgradeCost(node, 1);
+	if (coreCost < minCost) {
+		minCost = coreCost;
+		upgrade = "core";
+	}
+
+	return isFinite(minCost) ? upgrade, minCost : null, null;
 }
