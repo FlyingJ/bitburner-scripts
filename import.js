@@ -28,6 +28,8 @@ async function importFiles(ns) {
     'autoRemoteHack.js',
     'buyHacknet.js',
     'dashboard.js',
+    'deployNodes.js',
+    'deployUpgrades.js',
     'hack.js',
     'hax.js',
     'purchaseServers.js',
