@@ -38,7 +38,7 @@ function cost(ns, nodeIndex, part) {
 	return ns.hacknet[costFunction](nodeIndex, 1);
 }
 
-function nodesDeploying(ns) { return ns.isRunning(`/scripts/autoHacknet.js`); }
+function nodesDeploying(ns) { return ns.isRunning(`/scripts/deployNodes.js`); }
 
 async function buyUpgrade(ns) { await purchase(ns, leastCostlyUpgradeOrder(ns)); }
 
