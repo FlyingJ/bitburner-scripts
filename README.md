@@ -1,18 +1,18 @@
 # bitburner-scripts
 
-I'm playing [BitBurner]() on Thursdays at https://twitch.tv/ChaelCodes ! This is my Repo of BitBurner Scripts.
+This is my Repo of BitBurner Scripts.
 
 You can import these scripts by running the following in Bitburner.
 
 # Get the importer
-`wget https://raw.githubusercontent.com/ChaelCodes/bitburner-scripts/main/import.js import.js`
+`wget https://raw.githubusercontent.com/FlyingJ/bitburner-scripts/main/import.js import.js`
 # Configure your Import
 You can configure your import inside `import.js`.
 ```
     config = {
         folder: 'scripts',
-        rootUrl: 'https://raw.githubusercontent.com/ChaelCodes/bitburner-scripts/main/',
-        serverPrefix: 'ChaelPwns',
+        rootUrl: 'https://raw.githubusercontent.com/FlyingJ/bitburner-scripts/main/',
+        serverPrefix: 'j4ys3rv',
     };
 ```
 
