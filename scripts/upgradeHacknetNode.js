@@ -1,83 +1,67 @@
-export function upgradesAvailable(ns, node) {
-	return (levelAvailable(ns, node) || ramAvailable(ns, node) || coreAvailable(ns, node)) ? true : false;
-}
-
-function levelAvailable(ns, node) { return isFinite(ns.hacknet.getLevelUpgradeCost(node, 1)) ? true : false; }
-function ramAvailable(ns, node) { return isFinite(ns.hacknet.getRamUpgradeCost(node, 1)) ? true : false; }
-function coreAvailable(ns, node) { return isFinite(ns.hacknet.getCoreUpgradeCost(node, 1)) ? true : false; }
-
-export function leastCostlyUpgrade(ns, node) {
-	let minCost = ns.hacknet.getLevelUpgradeCost(node, 1);
-	let upgrade = "level";
-
-	let ramCost = ns.hacknet.getRamUpgradeCost(node, 1);
-	if (ramCost < minCost) {
-		minCost = ramCost;
-		upgrade = "ram";
-	}
-
-	var coreCost = ns.hacknet.getCoreUpgradeCost(node, 1);
-	if (coreCost < minCost) {
-		minCost = coreCost;
-		upgrade = "core";
-	}
-
-	return isFinite(minCost) ? upgrade : null;
-}
-
-export function isAffordable(ns, node, upgrade) { return cost(ns, node, upgrade) < availableFunds(ns) ? true : false; }
-
-function cost(ns, node, upgrade) {
-	switch (upgrade) {
-		case "ram":
-			return ns.hacknet.getRamUpgradeCost(node, 1);
-		case "core":
-			return ns.hacknet.getCoreUpgradeCost(node, 1);
-		default:
-			return ns.hacknet.getLevelUpgradeCost(node, 1);
-	}
-}
-
-function availableFunds(ns) {
-	return ns.getServerMoneyAvailable('home');
-}
-
-export function buyUpgrade(ns, node, upgrade) {
-	// purchase least expensive upgrade type
-	switch (upgrade) {
-		case "ram":
-			ns.hacknet.upgradeRam(node, 1);
-			break;
-		case "core":
-			ns.hacknet.upgradeCore(node, 1);
-			break;
-		default:
-			ns.hacknet.upgradeLevel(node, 1);
-			break;
-	}
-}
+const TICK = 1000;
 
 /** @param {NS} ns **/
 export async function main(ns) {
-	const TICK = 3000;
-	let node = ns.args[0];
+	await upgradeNode(ns, ns.args[0]);
+}
 
-	ns.disableLog("sleep");
-	ns.disableLog("getServerMoneyAvailable")
+async function upgradeNode(ns, node) {
+	ns.disableLog('sleep');
+	ns.disableLog('getServerMoneyAvailable');
 
-	if (!ns.hacknet.getNodeStats(node)) {
-		ns.print("Node designated " + node + " does not exist");
+	if (!exists(ns, node)) {
+		ns.tprint(`hacknet-node-${node} does not exist`);
 		return;
 	}
 
-	ns.tprint("Upgrading hacknet-node-" + node);
+	ns.tprint(`Upgrading hacknet-node-${node}`);
 	while (upgradesAvailable(ns, node)) {
-		let upgrade = leastCostlyUpgrade(ns, node);
-		// stall for cash
-		while (!isAffordable(ns, node, upgrade)) {
-			await ns.sleep(TICK);
-		}
+		let [upgrade, cost] = leastCostlyUpgrade(ns, node);
+		ns.print(`Least costly upgrade for hacknet-node-${node} is ${upgrade} at $${cost}`);
+		while (!affordable(ns, cost)) { await ns.sleep(TICK); }
 		buyUpgrade(ns, node, upgrade);
 	}
-	ns.tprint("hacknet-node-" + node + " fully upgraded");
+	ns.tprint(`hacknet-node-${node} fully upgraded`);
+}
+
+function exists(ns, node) { return ns.hacknet.getNodeStats(node) ? true : false; }
+
+function upgradesAvailable(ns, node) { return (levelAvailable(ns, node) || ramAvailable(ns, node) || coreAvailable(ns, node)) ? true : false; }
+
+function levelAvailable(ns, node) { return isFinite(cost(ns, node, 'level')) ? true : false; }
+function ramAvailable(ns, node) { return isFinite(cost(ns, node, 'ram')) ? true : false; }
+function coreAvailable(ns, node) { return isFinite(cost(ns, node, 'core')) ? true : false; }
+
+function leastCostlyUpgrade(ns, node) {
+	let minCost = cost(ns, node, 'level');
+	let upgrade = 'level';
+
+	let ramCost = cost(ns, node, 'ram');
+	if (ramCost < minCost) {
+		minCost = ramCost;
+		upgrade = 'ram';
+	}
+
+	var coreCost = cost(ns, node, 'core');
+	if (coreCost < minCost) {
+		minCost = coreCost;
+		upgrade = 'core';
+	}
+
+	return isFinite(minCost) ? [upgrade, minCost] : [null, null];
+}
+
+function cost(ns, node, upgrade) {
+	let part = upgrade.charAt(0).toUpperCase() + upgrade.slice(1);
+	let costFunction = `get${part}UpgradeCost`;
+	return ns.hacknet[costFunction](node, 1);
+}
+
+function affordable(ns, cost) { return cost < moneyAvailable(ns) ? true : false; }
+function moneyAvailable(ns) { return ns.getServerMoneyAvailable('home'); }
+
+function buyUpgrade(ns, node, upgrade) {
+	let part = upgrade.charAt(0).toUpperCase() + upgrade.slice(1);
+	let upgradeFunction = `upgrade${part}`;
+	return ns.hacknet[upgradeFunction](node, 1);
 }
