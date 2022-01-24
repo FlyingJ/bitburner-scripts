@@ -9,11 +9,6 @@ async function upgradeNode(ns, node) {
 	ns.disableLog('sleep');
 	ns.disableLog('getServerMoneyAvailable');
 
-	if (!exists(ns, node)) {
-		ns.tprint(`hacknet-node-${node} does not exist`);
-		return;
-	}
-
 	ns.tprint(`Upgrading hacknet-node-${node}`);
 	while (upgradesAvailable(ns, node)) {
 		let [upgrade, cost] = leastCostlyUpgrade(ns, node);
@@ -23,8 +18,6 @@ async function upgradeNode(ns, node) {
 	}
 	ns.tprint(`hacknet-node-${node} fully upgraded`);
 }
-
-function exists(ns, node) { return ns.hacknet.getNodeStats(node) ? true : false; }
 
 function upgradesAvailable(ns, node) { return (levelAvailable(ns, node) || ramAvailable(ns, node) || coreAvailable(ns, node)) ? true : false; }
 
