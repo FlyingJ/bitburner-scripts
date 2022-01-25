@@ -1,4 +1,6 @@
-const TICK = 1000;
+import {getHacknetUpgradeScript} from 'import.js';
+
+const TICK = 1250;
 const PARTS = ['Level', 'Ram', 'Core'];
 
 /** @param {NS} ns **/
@@ -16,16 +18,21 @@ The following block of functions need work.
 The least costly upgrade option is found twice on most occasions.
 Consequently, all available options are collected twice on most occasions.
 Potential spinning when earning money for a node while no other upgrades available.
-
-Hard-coded script path for node deployer.
 */
 async function deployUpgrades(ns) {
-	while (upgradesAvailable(ns) || nodesDeploying(ns)) { await buyUpgrade(ns); }
+		let options = getAllOptions(ns);
+		let option = leastCostlyOption(options);
+	do {
+		await purchase(ns, option);
+		options = getAllOptions(ns);
+		option = leastCostlyOption(options);
+	} while (necessary(ns, option));
 }
-function upgradesAvailable(ns) { return isFinite(leastCostlyOption(getAllOptions(ns)).cost); }
-function nodesDeploying(ns) { return ns.isRunning(`/scripts/deployNodes.js`); }
-async function buyUpgrade(ns) { await purchase(ns, leastCostlyOption(getAllOptions(ns))); }
-
+function necessary(ns, option) {
+	return (nodesDeploying(ns) || upgradesAvailable(option));
+}
+function nodesDeploying(ns) { return ns.isRunning(`${getHacknetUpgradeScript()}`); }
+function upgradesAvailable(option) { return isFinite(option.cost); }
 function leastCostlyOption(options) { return options.sort((a, b) => a.cost - b.cost)[0]; }
 
 function getAllOptions(ns) {
@@ -36,6 +43,7 @@ function getAllOptions(ns) {
 	return options;
 }
 function getPerNodeOptions(ns, nodeIndex) {
+	ns.print(`Getting options from hacknet-node-${nodeIndex}`);
 	let options = [];
 	for (let part of PARTS) {
 		let option = {
@@ -53,10 +61,13 @@ function cost(ns, nodeIndex, part) {
 }
 
 async function purchase(ns, option) {
-	let buyFunction = `upgrade${option.part}`;
-	while (option.cost > availableMoney(ns)) { await ns.sleep(TICK); }
-	ns.print(`Purchasing ${option.part} for hacknet-node-${option.nodeIndex} at cost of $${option.cost}`);
-	return ns.hacknet[buyFunction](option.nodeIndex, 1);
+	let index = option.nodeIndex;
+	let part = option.part;
+	let cost = option.cost;
+	let buyFunction = `upgrade${part}`;
+	while (cost > myMoney(ns)) { await ns.sleep(TICK); }
+	ns.print(`Purchasing ${part} for hacknet-node-${index} at cost of $${cost}`);
+	return ns.hacknet[buyFunction](index, 1);
 }
 
-function availableMoney(ns) { return ns.getServerMoneyAvailable('home'); }
+function myMoney(ns) { return ns.getServerMoneyAvailable('home'); }
