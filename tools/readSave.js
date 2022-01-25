@@ -2,6 +2,22 @@
 const fs = require('fs').promises;
 const path = require('path');
 
+const input = path.resolve(process.argv[2]);
+const output = path.resolve(process.argv[3]);
+
+console.log(`Input: ${input}`);
+console.log(`Output: ${output}`);
+
+main(input, output).then(() => {
+  console.log('Done!');
+})
+
+async function main(input, output) {
+  const result = await getSave(input)
+  await fs.writeFile(output, JSON.stringify(result, null, 2));
+  return result
+}
+
 async function getSave(file) {
   const data = await fs.readFile(file, 'utf8');
 
@@ -19,7 +35,7 @@ async function getSave(file) {
     VersionSave: JSON.parse(saveData.VersionSave),
     LastExportBonus: JSON.parse(saveData.LastExportBonus),
     StaneksGiftSave: JSON.parse(saveData.StaneksGiftSave),
-    SaveTimestamp: new Date(parseInt(saveData.SaveTimestamp ?? '0', 10)).toLocaleString(),
+    // SaveTimestamp: new Date(parseInt(saveData.SaveTimestamp ?? '0', 10)).toLocaleString(),
   }
 
   const serverStrings = JSON.parse(saveData.AllServersSave);
@@ -36,19 +52,3 @@ async function getSave(file) {
 
   return gameSave;
 }
-
-async function main(input, output) {
-  const result = await getSave(input)
-  await fs.writeFile(output, JSON.stringify(result, null, 2));
-  return result
-}
-
-const input = path.resolve(process.argv[2]);
-const output = path.resolve(process.argv[3]);
-
-console.log(`Input: ${input}`);
-console.log(`Output: ${output}`);
-
-main(input, output).then(() => {
-  console.log('Done!');
-})
