@@ -13,12 +13,6 @@ export async function main(ns) {
 	ns.print('Finished deploying upgrades');
 }
 
-/*
-The following block of functions need work.
-The least costly upgrade option is found twice on most occasions.
-Consequently, all available options are collected twice on most occasions.
-Potential spinning when earning money for a node while no other upgrades available.
-*/
 async function deployUpgrades(ns) {
 		let options = getAllOptions(ns);
 		let option = leastCostlyOption(options);
