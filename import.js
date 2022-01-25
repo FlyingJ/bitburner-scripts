@@ -11,35 +11,35 @@ export async function main(ns) {
     ns.tprint('='.repeat(20));
     if (filesImported) {
         ns.tprint('Hey! Thank you for downloading the BitBurner Scripts.');
-        ns.tprint(`You've installed these in the ${config.folder} directory.`);
+        ns.tprint(`You've installed these in the ${getFolder()} directory.`);
         ns.tprint(
-          `A good place to start is running \`run /${config.folder}/hax.js\``
-          );
+            `A good place to start is running \`run /${getFolder()}/hax.js\``
+        );
     } else {
         ns.tprint(
-          'You had some issues downloading files, please reach out to the repo maintainer or check your config.'
-          );
+            'You had some issues downloading files, please reach out to the repo maintainer or check your config.'
+        );
     }
 }
 
 async function importFiles(ns) {
     let files = [
-    'autoHack.js',
-    'autoRemoteHack.js',
-    'buyHacknet.js',
-    'dashboard.js',
-    'deployNodes.js',
-    'deployUpgrades.js',
-    'hack.js',
-    'hax.js',
-    'homeHack.js',
-    'purchaseServers.js',
-    'remoteHack.js',
-    'serverStatus.js',
+        'autoHack.js',
+        'autoRemoteHack.js',
+        'buyHacknet.js',
+        'dashboard.js',
+        'deployNodes.js',
+        'deployUpgrades.js',
+        'hack.js',
+        'hax.js',
+        'homeHack.js',
+        'purchaseServers.js',
+        'remoteHack.js',
+        'serverStatus.js',
     ];
     let filesImported = true;
     for (let file of files) {
-        let remoteFileName = `${config.rootUrl}scripts/${file}`;
+        let remoteFileName = `${getRootUrl()}scripts/${file}`;
         let result = await ns.wget(remoteFileName, `/${getFolder()}/${file}`);
         filesImported = filesImported && result;
         ns.tprint(`File: ${file}: ${result ? '✔️' : '❌'}`);
@@ -47,18 +47,9 @@ async function importFiles(ns) {
     return filesImported;
 }
 
-export function getFolder() {
-    return config.folder;
-}
+export function getFolder() { return config.folder; }
+export function getRootUrl() { return config.rootUrl; }
+export function getServerPrefix() { return config.serverPrefix; }
 
-export function getServerPrefix() {
-    return config.serverPrefix;
-}
-
-export function getHackScript() {
-    return `/${getFolder()}/hack.js`;
-}
-
-export function getHacknetUpgradeScript() {
-    return `/${getFolder()}/deployUpgrades.js`;
-}
+export function getHackScript() { return `/${getFolder()}/hack.js`; }
+export function getHacknetUpgradeScript() { return `/${getFolder()}/deployUpgrades.js`; }
