@@ -32,6 +32,7 @@ async function importFiles(ns) {
     'deployUpgrades.js',
     'hack.js',
     'hax.js',
+    'homeHack.js',
     'purchaseServers.js',
     'remoteHack.js',
     'serverStatus.js',
