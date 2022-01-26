@@ -1,20 +1,32 @@
-import { getHackScript } from 'import.js';
-
+const SCRIPT = '/scripts/homeHack.js';
+const HACKSCRIPT = '/scripts/hack.js';
+const HOME = 'home';
 const RESERVERAM = 20; // RAM in GB to reserve for running other commands, scripts
 
 /** @param {NS} ns **/
 export async function main(ns) {
+	const target = ns.args[0];
+	if (typeof target === 'undefined') {
+		ns.tprint(`Usage: run ${SCRIPT} TARGET`);
+		ns.tprint(`Example: run ${SCRIPT} iron-gym`);
+		return;
+	}
 
-	ns.scriptRunning(getHackScript(), 'home') && ns.scriptKill(getHackScript(), 'home');
+	if(ns.scriptRunning(HACKSCRIPT, HOME)) {
+		ns.scriptKill(HACKSCRIPT, HOME);
+		ns.print(`Killed running instance of ${HACKSCRIPT}`);
+	}
 
-	const freeRam = ns.getServerMaxRam('home') - ns.getServerUsedRam('home');
+	const freeRam = getServerFreeRam(ns, HOME);
 	const usableRam = freeRam - RESERVERAM;
 	if (usableRam < 0) {
 		ns.tprint(`Insufficient RAM for extra hackings`);
 		return;
 	}
 
-	const instanceRam = ns.getScriptRam(getHackScript());
+	const instanceRam = ns.getScriptRam(HACKSCRIPT);
 	const threads = Math.floor(usableRam / instanceRam);
-	ns.run(getHackScript(), threads, 'iron-gym', threads);
+	return ns.exec(HACKSCRIPT, HOME, threads, target, threads);
 }
+
+function getServerFreeRam(ns, server) { return ns.getServerMaxRam(server) - ns.getServerUsedRam(server); }
