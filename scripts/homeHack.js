@@ -3,6 +3,10 @@ const HACKSCRIPT = '/scripts/hack.js';
 const HOME = 'home';
 const RESERVERAM = 20; // RAM in GB to reserve for running other commands, scripts
 
+export function autocomplete(data, args) {
+	return [...data.servers];
+}
+
 /** @param {NS} ns **/
 export async function main(ns) {
 	const target = ns.args[0];
@@ -12,7 +16,7 @@ export async function main(ns) {
 		return;
 	}
 
-	if(ns.scriptRunning(HACKSCRIPT, HOME)) {
+	if (ns.scriptRunning(HACKSCRIPT, HOME)) {
 		ns.scriptKill(HACKSCRIPT, HOME);
 		ns.print(`Killed running instance of ${HACKSCRIPT}`);
 	}
