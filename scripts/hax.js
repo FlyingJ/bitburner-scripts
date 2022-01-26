@@ -10,23 +10,26 @@ async function runCommand(ns, command) {
     case 'autoHack':
     case 'autoRemoteHack':
     case 'dashboard':
+    case 'deployNodes':
+    case 'deployUpgrades':
     case 'purchaseServers':
       ns.run(`/${getFolder()}/${command}.js`);
       break;
     case 'sudo autohack':
     case 'sudo autoHack':
-      ns.run(`/${getFolder()}/autoHack.js`);
-      ns.run(`/${getFolder()}/autoRemoteHack.js`);
+      await runCommand(ns, 'autoHack');
+      await runCommand(ns, 'autoRemoteHack');
       break;
     case 'autohack':
-      ns.run(`/${getFolder()}/autoHack.js`);
+      await runCommand(ns, 'autoHack');
       break;
     case 'serverhack':
     case 'serverHack':
-      ns.run(`/${getFolder()}/autoRemoteHack.js`);
+      await runCommand(ns, 'autoRemoteHack');
       break;
+    case 'dash':
     case 'status':
-      ns.run(`/${getFolder()}/dashboard.js`);
+      await runCommand(ns, 'dashboard');
       break;
     case 'buy':
     case 'purchase':
@@ -43,7 +46,7 @@ async function runCommand(ns, command) {
     case 'buyServer':
     case 'purchaseServer':
     case 'buyServers':
-      ns.run(`/${getFolder()}/purchaseServers.js`);
+      await runCommand(ns, 'purchaseServers');
       break;
     default:
       ns.tprint(`Oh no! ${command} isn't a valid command. Try: dashboard, autoHack, autoRemoteHack, or buy.`);
@@ -52,7 +55,7 @@ async function runCommand(ns, command) {
 
 async function indecisiveBuyer(ns) {
   let buyServer = await ns.prompt("Did you want to buy servers?");
-  if (buyServer) { ns.run(`/${getFolder()}/purchaseServers.js`); }
+  if (buyServer) { await runCommand(ns, 'purchaseServers'); }
   let buyHacknet = await ns.prompt("Did you want to buy hacknet nodes?");
   if (buyHacknet) {
     ns.run(`/${getFolder()}/buyHacknet.js`, 1, 'buyNode');
@@ -60,6 +63,14 @@ async function indecisiveBuyer(ns) {
   }
 }
 
-export function autocomplete(data, args){
-  return ['autoHack', 'autoRemoteHack','dashboard','buy', 'purchaseServer', 'buyHacknet', 'upgradeHacknet'];
+export function autocomplete(data, args) {
+  return ['autoHack',
+    'autoRemoteHack',
+    'dashboard',
+    'deployNodes',
+    'deployUpgrades',
+    'buy',
+    'purchaseServer',
+    'buyHacknet',
+    'upgradeHacknet'];
 }
