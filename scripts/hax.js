@@ -10,6 +10,7 @@ async function runCommand(ns, command) {
     case 'autoHack':
     case 'autoRemoteHack':
     case 'dashboard':
+    case 'deployHacknet':
     case 'deployNodes':
     case 'deployUpgrades':
     case 'purchaseServers':
@@ -31,13 +32,6 @@ async function runCommand(ns, command) {
     case 'status':
       await runCommand(ns, 'dashboard');
       break;
-    case 'buyHacknet':
-    case 'deployHacknet':
-    case 'purchaseHacknet':
-    case 'upgradeHacknet':
-      await runCommand(ns, 'deployNodes');
-      await runCommand(ns, 'deployUpgrades');
-      break;
     case 'buyServer':
     case 'purchaseServer':
     case 'buyServers':
@@ -53,7 +47,5 @@ export function autocomplete(data, args) {
     'autoRemoteHack',
     'dashboard',
     'deployHacknet',
-    'deployNodes',
-    'deployUpgrades',
     'purchaseServer'];
 }
