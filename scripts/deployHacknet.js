@@ -40,7 +40,6 @@ function getAllOptions(ns) {
 	return options;
 }
 function getPerNodeOptions(ns, nodeIndex) {
-	ns.print(`Getting options from hacknet-node-${nodeIndex}`);
 	let options = [];
 	for (let part of PARTS) {
 		let option = {
