@@ -1,3 +1,4 @@
+const TICK = 1250;
 const MAXWAIT = 3600 * 12; // 12 hours in seconds
 const BASEMAXNODEEARNINGS = 9171;
 const PARTS = ['Level', 'Ram', 'Core'];
