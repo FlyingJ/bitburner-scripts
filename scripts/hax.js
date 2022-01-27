@@ -31,17 +31,12 @@ async function runCommand(ns, command) {
     case 'status':
       await runCommand(ns, 'dashboard');
       break;
-    case 'buy':
-    case 'purchase':
-      await indecisiveBuyer(ns);
-      break;
     case 'buyHacknet':
+    case 'deployHacknet':
     case 'purchaseHacknet':
-      ns.run(`/${getFolder()}/buyHacknet.js`, 1, 'buyNode');
-      break;
     case 'upgradeHacknet':
-      ns.run(`/${getFolder()}/buyHacknet.js`, 1, 'buyNode');
-      ns.run(`/${getFolder()}/buyHacknet.js`, 1, 'upgradeNodes');
+      await runCommand(ns, 'deployNodes');
+      await runCommand(ns, 'deployUpgrades');
       break;
     case 'buyServer':
     case 'purchaseServer':
@@ -49,17 +44,7 @@ async function runCommand(ns, command) {
       await runCommand(ns, 'purchaseServers');
       break;
     default:
-      ns.tprint(`Oh no! ${command} isn't a valid command. Try: dashboard, autoHack, autoRemoteHack, or buy.`);
-  }
-}
-
-async function indecisiveBuyer(ns) {
-  let buyServer = await ns.prompt("Did you want to buy servers?");
-  if (buyServer) { await runCommand(ns, 'purchaseServers'); }
-  let buyHacknet = await ns.prompt("Did you want to buy hacknet nodes?");
-  if (buyHacknet) {
-    ns.run(`/${getFolder()}/buyHacknet.js`, 1, 'buyNode');
-    ns.tprint(`You've bought a node. See \`run /${getFolder()}/buyHacknet.js\` for more options.`);
+      ns.tprint(`Oh no! ${command} isn't a valid command. Try: dashboard, autoHack, autoRemoteHack, or deployHacknet.`);
   }
 }
 
@@ -67,10 +52,8 @@ export function autocomplete(data, args) {
   return ['autoHack',
     'autoRemoteHack',
     'dashboard',
+    'deployHacknet',
     'deployNodes',
     'deployUpgrades',
-    'buy',
-    'purchaseServer',
-    'buyHacknet',
-    'upgradeHacknet'];
+    'purchaseServer'];
 }
