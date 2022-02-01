@@ -2,10 +2,12 @@ import { getFolder } from 'import.js';
 /* Run various scripts easily and from one interface
  */
 export async function main(ns) {
-  await runCommand(ns, ns.args[0]);
+  const command = ns.args[0];
+  const commandArgs = ns.args.slice(1);
+  await runCommand(ns, command, commandArgs);
 }
 
-async function runCommand(ns, command) {
+async function runCommand(ns, command, commandArgs) {
   switch (command) {
     case 'autoHack':
     case 'autoRemoteHack':
@@ -15,6 +17,9 @@ async function runCommand(ns, command) {
     case 'deployUpgrades':
     case 'purchaseServers':
       ns.run(`/${getFolder()}/${command}.js`);
+      break;
+    case 'localHack':
+      ns.run(`/${getFolder()}/${command}.js`, 1, commandArgs[0]);
       break;
     case 'sudo autohack':
     case 'sudo autoHack':
@@ -47,5 +52,6 @@ export function autocomplete(data, args) {
     'autoRemoteHack',
     'dashboard',
     'deployHacknet',
+    'localHack',
     'purchaseServer'];
 }
