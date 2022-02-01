@@ -18,19 +18,14 @@ export async function main(ns) {
 
 	if (ns.scriptRunning(HACKSCRIPT, HOME)) {
 		ns.scriptKill(HACKSCRIPT, HOME);
-		ns.print(`Killed running instance of ${HACKSCRIPT}`);
+		ns.tprint(`Killed running instance of ${HACKSCRIPT}`);
 	}
 
-	const freeRam = getServerFreeRam(ns, HOME);
-	const usableRam = freeRam - RESERVERAM;
-	if (usableRam < 0) {
-		ns.tprint(`Insufficient RAM for extra hackings`);
-		return;
-	}
+	const freeRam = ns.getServerMaxRam(HOME) - ns.getServerUsedRam(HOME);
+	const threadRam = ns.getScriptRam(HACKSCRIPT);
 
-	const instanceRam = ns.getScriptRam(HACKSCRIPT);
-	const threads = Math.floor(usableRam / instanceRam);
-	return ns.exec(HACKSCRIPT, HOME, threads, target, threads);
+	const usableRam = (RESERVERAM < freeRam) ? freeRam - RESERVERAM : 0;
+	const threads = Math.floor(usableRam / threadRam);
+
+	ns.exec(HACKSCRIPT, HOME, threads, target, threads);
 }
-
-function getServerFreeRam(ns, server) { return ns.getServerMaxRam(server) - ns.getServerUsedRam(server); }
