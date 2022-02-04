@@ -15,6 +15,7 @@ async function runCommand(ns, command, commandArgs) {
     case 'deployHacknet':
     case 'deployNodes':
     case 'deployUpgrades':
+    case 'gangManager':
     case 'purchaseServers':
       ns.run(`/${getFolder()}/${command}.js`);
       break;
@@ -52,6 +53,7 @@ export function autocomplete(data, args) {
     'autoRemoteHack',
     'dashboard',
     'deployHacknet',
+    'gangManager',
     'localHack',
     'purchaseServer'];
 }
