@@ -34,8 +34,13 @@ export async function main(ns) {
       let growthFocus = attrSnaps.sort((a, b) => b.xp - a.xp)[0];
       // ns.print(`${memberInfo.name} -> ${growthFocus.name} -> ${growthFocus.ascGain}`);
 
-      if (growthFocus.ascGain > 1) { ns.gang.ascendMember(memberInfo.name) };
+      if (growthFocus.ascGain > ascGainTarget(growthFocus)) { ns.gang.ascendMember(memberInfo.name) };
     }
     await ns.sleep(TICK);
   }
+}
+
+function ascGainTarget(attrs) {
+  // return attrs.ascGain * Math.log(attrs.xp);
+  return 2;
 }
