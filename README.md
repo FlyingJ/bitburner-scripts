@@ -1,6 +1,6 @@
 # bitburner-scripts
 
-This is my Repo of BitBurner Scripts.
+This is my Repo of BitBurner Scripts (originally forked from ChaelCodes).
 
 You can import these scripts by running the following in Bitburner.
 
