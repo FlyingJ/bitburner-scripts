@@ -26,7 +26,6 @@ async function importFiles(ns) {
     let files = [
         'autoHack.js',
         'autoRemoteHack.js',
-        'buyHacknet.js',
         'dashboard.js',
         'deployNodes.js',
         'deployUpgrades.js',
