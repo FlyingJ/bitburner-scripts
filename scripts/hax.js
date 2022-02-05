@@ -13,8 +13,8 @@ async function runCommand(ns, command, commandArgs) {
     case 'autoRemoteHack':
     case 'dashboard':
     case 'hacknetManager':
-    case 'deployNodes':
-    case 'deployUpgrades':
+    case 'hacknetNodeManager':
+    case 'hacknetUpgradeManager':
     case 'gangManager':
     case 'purchaseServers':
       ns.run(`/${getFolder()}/${command}.js`);
