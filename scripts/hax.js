@@ -12,7 +12,7 @@ async function runCommand(ns, command, commandArgs) {
     case 'autoHack':
     case 'autoRemoteHack':
     case 'dashboard':
-    case 'deployHacknet':
+    case 'hacknetManager':
     case 'deployNodes':
     case 'deployUpgrades':
     case 'gangManager':
@@ -44,7 +44,7 @@ async function runCommand(ns, command, commandArgs) {
       await runCommand(ns, 'purchaseServers');
       break;
     default:
-      ns.tprint(`Oh no! ${command} isn't a valid command. Try: dashboard, autoHack, autoRemoteHack, or deployHacknet.`);
+      ns.tprint(`Oh no! ${command} isn't a valid command. Try: dashboard, autoHack, autoRemoteHack, or hacknetManager.`);
   }
 }
 
@@ -52,7 +52,7 @@ export function autocomplete(data, args) {
   return ['autoHack',
     'autoRemoteHack',
     'dashboard',
-    'deployHacknet',
+    'hacknetManager',
     'gangManager',
     'localHack',
     'purchaseServer'];
