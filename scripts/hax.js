@@ -55,5 +55,6 @@ export function autocomplete(data, args) {
     'hacknetManager',
     'gangManager',
     'localHack',
-    'purchaseServer'];
+    'purchaseServer',
+    ...data.servers];
 }
