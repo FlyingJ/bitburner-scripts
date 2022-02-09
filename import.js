@@ -26,13 +26,14 @@ async function importFiles(ns) {
     let files = [
         'autoHack.js',
         'autoRemoteHack.js',
-        'buyHacknet.js',
         'dashboard.js',
-        'deployNodes.js',
-        'deployUpgrades.js',
+        'gangManager.js',
         'hack.js',
+        'hacknetManager.js',
+        'hacknetNodeManager.js',
+        'hacknetUpgradeManager.js',
         'hax.js',
-        'homeHack.js',
+        'localHack.js',
         'purchaseServers.js',
         'remoteHack.js',
         'serverStatus.js',
@@ -52,4 +53,3 @@ export function getRootUrl() { return config.rootUrl; }
 export function getServerPrefix() { return config.serverPrefix; }
 
 export function getHackScript() { return `/${getFolder()}/hack.js`; }
-export function getHacknetUpgradeScript() { return `/${getFolder()}/deployUpgrades.js`; }
