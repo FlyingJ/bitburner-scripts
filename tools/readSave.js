@@ -3,40 +3,54 @@ const fs = require('fs');
 const path = require('path');
 
 const input = path.resolve(process.argv[2]);
-// const output = path.resolve(process.argv[3]);
 
 console.log(`Input: ${input}`);
-// console.log(`Output: ${output}`);
 
 main(input).then(() => {
   console.log('Done!');
-})
+});
 
 async function main(input) {
-  try {
-    let saveObject = JSON.parse(buffer.Buffer.from(fs.readFileSync(input, 'utf8'), 'base64').toString());
+  let fileContent = fs.readFileSync(input, 'utf8');
+  let buffyr = buffer.Buffer.from(fileContent, 'base64');
+  let saveContent = buffyr.toString();
+  let saveObject = JSON.parse(saveContent);
 
-    console.log(saveObject.data.PlayerSave);
+  console.log(Object.keys(saveObject.data));
+  /*
+  Object.keys(saveObject.data)
 
-    let PlayerSave = JSON.parse(saveObject.data.PlayerSave);
+  [
+  'PlayerSave',
+  'AllServersSave',
+  'CompaniesSave',
+  'FactionsSave',
+  'AliasesSave',
+  'GlobalAliasesSave',
+  'MessagesSave',
+  'StockMarketSave',
+  'SettingsSave',
+  'VersionSave',
+  'AllGangsSave',
+  'LastExportBonus',
+  'StaneksGiftSave',
+  'SaveTimestamp'
+  ]
+  */
+  let playerSaveObject = JSON.parse(saveObject.data.PlayerSave);
 
-    const SPLOIT = `EditSaveFile`;
+  console.log(playerSaveObject.data);
 
-    console.log(PlayerSave.data.exploits);
+  console.log(playerSaveObject.data.hacknetNodes);
 
-    PlayerSave.data.exploits.push(SPLOIT);
+  /*
+  let playerSaveContent = saveObject.data.PlayerSave;
 
-    console.log(PlayerSave.data.exploits);
-
-    saveObject.data.PlayerSave = JSON.stringify(PlayerSave);
-
-    console.log(saveObject.data.PlayerSave);
-
-    const newSaveFile = JSON.stringify(saveObject);
-
-    fs.writeFileSync('a.out', buffer.Buffer.from(newSaveFile).toString('base64'), 'utf8');
-
-  } catch (err) {
-    console.error(err);
-  }
-}
+  console.log(playerSaveContent);
+  let playerSaveObject = JSON.parse(playerSaveContent);
+  
+  
+  saveObject.data.PlayerSave = JSON.stringify(playerSaveObject);
+  console.log(saveObject.data.PlayerSave);
+  */
+};
