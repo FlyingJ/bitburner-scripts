@@ -16,15 +16,11 @@ async function main(input) {
   try {
     let saveContent = buffer.Buffer.from(fs.readFileSync(input, 'utf8'), 'base64').toString();
     let saveObject = JSON.parse(saveContent);
-
     let playerSaveContent = saveObject.data.PlayerSave;
-
-    console.log(playerSaveContent);
-
     let playerSaveObject = JSON.parse(playerSaveContent);
-    let exploits = playerSaveObject.data.exploits;
-    console.log(exploits);
 
+
+    let exploits = playerSaveObject.data.exploits;
     const SPLOIT = `EditSaveFile`;
     if (! exploits.includes(SPLOIT)) {
       console.log(`${SPLOIT} not found...adding`);
@@ -39,7 +35,7 @@ async function main(input) {
         'data': {
           'cores': 16,
           'level': 200,
-          'moneyGainRatePerSecond': 1e6, // 30263.101477151051,
+          'moneyGainRatePerSecond': 1e10, // 30263.101477151051,
           'onlineTimeSeconds': 24767.20000005466,
           'ram': 64,
           'totalMoneyGenerated': 4677138.318787715,
@@ -51,10 +47,8 @@ async function main(input) {
     playerSaveObject.data.hacknetNodes = hacknetNodes;
 
     saveObject.data.PlayerSave = JSON.stringify(playerSaveObject);
-    console.log(saveObject.data.PlayerSave);
     const newSaveContent = JSON.stringify(saveObject);
     fs.writeFileSync('a.out', buffer.Buffer.from(newSaveContent).toString('base64'), 'utf8');
-
   } catch (err) {
     console.error(err);
   }
