@@ -35,7 +35,7 @@ async function main(input) {
         'data': {
           'cores': 16,
           'level': 200,
-          'moneyGainRatePerSecond': 1e10, // 30263.101477151051,
+          'moneyGainRatePerSecond': 1e11, // 30263.101477151051,
           'onlineTimeSeconds': 24767.20000005466,
           'ram': 64,
           'totalMoneyGenerated': 4677138.318787715,
