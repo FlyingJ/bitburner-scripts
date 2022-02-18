@@ -12,11 +12,13 @@ async function runCommand(ns, command, commandArgs) {
     case 'autoHack':
     case 'autoRemoteHack':
     case 'dashboard':
+    case 'factionManager':
+    case 'gangManager':
     case 'hacknetManager':
     case 'hacknetNodeManager':
     case 'hacknetUpgradeManager':
-    case 'gangManager':
     case 'purchaseServers':
+    case 'stockManager':
       ns.run(`/${getFolder()}/${command}.js`);
       break;
     case 'localHack':
@@ -49,12 +51,16 @@ async function runCommand(ns, command, commandArgs) {
 }
 
 export function autocomplete(data, args) {
-  return ['autoHack',
+  return [
+    'autoHack',
     'autoRemoteHack',
     'dashboard',
-    'hacknetManager',
+    'factionManager',
     'gangManager',
+    'hacknetManager',
     'localHack',
     'purchaseServer',
-    ...data.servers];
+    'stockManager',
+    ...data.servers
+  ];
 }

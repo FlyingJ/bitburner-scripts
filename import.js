@@ -37,6 +37,7 @@ async function importFiles(ns) {
         'purchaseServers.js',
         'remoteHack.js',
         'serverStatus.js',
+        'stockManager.js',
     ];
     let filesImported = true;
     for (let file of files) {
@@ -53,3 +54,4 @@ export function getRootUrl() { return config.rootUrl; }
 export function getServerPrefix() { return config.serverPrefix; }
 
 export function getHackScript() { return `/${getFolder()}/hack.js`; }
+export function getHacknetUpgradeScript() { return `/${getFolder()}/deployUpgrades.js`; }
