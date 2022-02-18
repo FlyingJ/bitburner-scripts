@@ -1,6 +1,7 @@
 const TICK = 5 * 1000; // seconds in millis
-const BUYTHRESH = 0.1; // 55% or better growth forecast to buy
-const SELLTHRESH = 1.10; // 10% or better profit
+const BUYTHRESH = 0.55; // 55% or better growth forecast to buy
+const LOSSTHRESH = -0.05; // 10% loss triggers sell
+const ROITHRESH = 1.09; // 25% or better profit
 const CASHFLOOR = 10e6; // have 10.000m to do other stuff with
 
 /** @param {NS} ns **/
@@ -20,12 +21,24 @@ function have4SDataAccess(ns) { return ns.stock.getForecast; }
 
 async function stockManager(ns, funding) {
 	const symbols = ns.stock.getSymbols();
-	ns.print(symbols);
 	while (true) {
+		// dump everything
 		let marketData = getMarketData(ns, symbols);
+
+		// look at what else is available for purchase
+		let noHoldings = marketData.filter(haveNoShares);
+		let projectedWinners = noHoldings.filter(havePositiveForecast);
+		let sortedProjectedWinners = projectedWinners.sort((a, b) => b.forecast - a.forecast);
+		buyStocks(ns, sortedProjectedWinners);
+
+		// look at what we have for wheat, chaff
 		let myHoldings = marketData.filter(haveShares);
-		let stuffToBuy = marketData.filter(haveNoShares).filter(havePositiveForecast).sort((a, b) => b.forecast - a.forecast);
-		let stuffToSell = myHoldings.filter(haveNegativeForecast).filter(havePositiveGrowth);
+		let projectedLosers = myHoldings.filter(haveNegativeForecast);
+		sellStocks(ns, projectedLosers);
+		let actualLosers = myHoldings.filter(haveSufficientLosses);
+		sellStocks(ns, actualLosers);
+		let breadWinners = myHoldings.filter(haveSufficientROI);
+		sellStocks(ns, breadWinners);
 
 		/*
 		ns.tprintf(`\n=========================== HOLDINGS ============================\n`);
@@ -35,10 +48,7 @@ async function stockManager(ns, funding) {
 		ns.tprint(`=========================== TO SELL ==========================`);
 		ns.tprint(stuffToSell);
 		*/
-		
-		buyStocks(ns, stuffToBuy);
-		sellStocks(ns, stuffToSell);
-		
+
 		await ns.sleep(TICK);
 	}
 }
@@ -74,8 +84,10 @@ function buyStock(ns, symbolData) {
 function haveNoShares(symbolData, symbolIndex, marketData) { return symbolData.shares < 1; }
 function haveShares(symbolData, symbolIndex, marketData) { return symbolData.shares > 0; }
 function havePositiveForecast(symbolData, symbolIndex, marketData) { return symbolData.forecast > BUYTHRESH; }
-function haveNegativeForecast(symbolData, symbolIndex, marketData) { return symbolData.forecast < 0; }
+function haveNegativeForecast(symbolData, symbolIndex, marketData) { return symbolData.forecast < 0.50; }
 function havePositiveGrowth(symbolData, symbolIndex, marketData) { return symbolData.earnings > 0; }
+function haveSufficientROI(symbolData, symbolIndex, marketData) { return symbolData.earnings > ROITHRESH; }
+function haveSufficientLosses(symbolData, symbolIndex, marketData) { return symbolData.earnings < LOSSTHRESH; }
 
 function getMarketData(ns, symbols) {
 	let marketData = [];
@@ -89,18 +101,18 @@ function getSymbolData(ns, symbol) {
 	let average = position[1];
 	let currentAverage = ns.stock.getPrice(symbol);
 	let earnings = (currentAverage - average) / average;
+	let forecast = ns.stock.getForecast(symbol);
 	let symbolData = {
 		'symbol': symbol,
 		'shares': shares,
 		'average': average,
 		'currentAverage': currentAverage,
 		'earnings': earnings,
-		'forecast': normalizedForecast(ns, symbol),
+		'forecast': forecast,
 	};
 	return symbolData;
 }
 
-function normalizedForecast(ns, symbol) { return 2.0 * (ns.stock.getForecast(symbol) - 0.5); }
 function myMoney(ns) {
 	return ns.getServerMoneyAvailable(`home`);
 }
