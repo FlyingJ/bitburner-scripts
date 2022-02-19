@@ -1,7 +1,7 @@
 const TICK = 5 * 1000; // seconds in millis
-const BUYTHRESH = 0.55; // 55% or better growth forecast to buy
-const LOSSTHRESH = -0.05; // 10% loss triggers sell
-const ROITHRESH = 1.09; // 25% or better profit
+const BUYTHRESH = 0.53; // 55% or better growth forecast to buy
+const LOSSTHRESH = -0.007; // 5% loss triggers sell
+const ROITHRESH = 0.10; // 25% or better profit
 const CASHFLOOR = 10e6; // have 10.000m to do other stuff with
 
 /** @param {NS} ns **/
@@ -24,20 +24,23 @@ async function stockManager(ns, funding) {
 	while (true) {
 		// dump everything
 		let marketData = getMarketData(ns, symbols);
+		//ns.print(marketData.sort((a, b) => b.earnings - a.earnings));
 
 		// look at what else is available for purchase
 		let noHoldings = marketData.filter(haveNoShares);
+		//ns.print(noHoldings.filter(haveNegativeForecast).sort((a, b) => b.forecast - a.forecast));
 		let projectedWinners = noHoldings.filter(havePositiveForecast);
-		let sortedProjectedWinners = projectedWinners.sort((a, b) => b.forecast - a.forecast);
-		buyStocks(ns, sortedProjectedWinners);
+		buyStocks(ns, projectedWinners);
 
 		// look at what we have for wheat, chaff
 		let myHoldings = marketData.filter(haveShares);
+		//ns.print(myHoldings.sort((a, b) => b.earnings - a.earnings));
 		let projectedLosers = myHoldings.filter(haveNegativeForecast);
 		sellStocks(ns, projectedLosers);
 		let actualLosers = myHoldings.filter(haveSufficientLosses);
 		sellStocks(ns, actualLosers);
 		let breadWinners = myHoldings.filter(haveSufficientROI);
+		//ns.print(breadWinners);
 		sellStocks(ns, breadWinners);
 
 		/*
