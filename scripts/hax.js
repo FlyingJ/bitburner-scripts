@@ -21,6 +21,7 @@ async function runCommand(ns, command, commandArgs) {
     case 'stockManager':
       ns.run(`/${getFolder()}/${command}.js`);
       break;
+    case 'localGrow':
     case 'localHack':
       ns.run(`/${getFolder()}/${command}.js`, 1, commandArgs[0]);
       break;
@@ -58,6 +59,7 @@ export function autocomplete(data, args) {
     'factionManager',
     'gangManager',
     'hacknetManager',
+    'localGrow',
     'localHack',
     'purchaseServer',
     'stockManager',
