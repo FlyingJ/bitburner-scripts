@@ -1,4 +1,4 @@
-const SCRIPT = '/scripts/homeHack.js';
+const SCRIPT = '/scripts/localHack.js';
 const HACKSCRIPT = '/scripts/hack.js';
 const HOME = 'home';
 const RESERVERAM = 20; // RAM in GB to reserve for running other commands, scripts
