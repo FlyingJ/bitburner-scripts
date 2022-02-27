@@ -41,7 +41,7 @@ async function main(input) {
 
   console.log(playerSaveObject.data);
 
-  console.log(playerSaveObject.data.hacknetNodes);
+  console.log(playerSaveObject.data.gang.data.members.filter(weirdName));
 
   /*
   let playerSaveContent = saveObject.data.PlayerSave;
@@ -54,3 +54,5 @@ async function main(input) {
   console.log(saveObject.data.PlayerSave);
   */
 };
+
+function weirdName(element, index, array) { return element.data.name === `gang-7`;}
