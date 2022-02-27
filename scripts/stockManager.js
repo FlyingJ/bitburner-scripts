@@ -1,7 +1,7 @@
-const TICK = 5 * 1000; // seconds in millis
-const BUYTHRESH = 0.53; // 55% or better growth forecast to buy
-const LOSSTHRESH = -0.007; // 5% loss triggers sell
-const ROITHRESH = 0.10; // 25% or better profit
+const TICK = 10 * 1000; // seconds in millis
+const BUYTHRESH = 0.55; // 55% or better growth forecast to buy
+const LOSSTHRESH = -0.0123; // 5% loss triggers sell
+const ROITHRESH = 0.035; // 25% or better profit
 const CASHFLOOR = 10e6; // have 10.000m to do other stuff with
 
 /** @param {NS} ns **/
@@ -35,10 +35,10 @@ async function stockManager(ns, funding) {
 		// look at what we have for wheat, chaff
 		let myHoldings = marketData.filter(haveShares);
 		//ns.print(myHoldings.sort((a, b) => b.earnings - a.earnings));
-		let projectedLosers = myHoldings.filter(haveNegativeForecast);
-		sellStocks(ns, projectedLosers);
-		let actualLosers = myHoldings.filter(haveSufficientLosses);
-		sellStocks(ns, actualLosers);
+		//let projectedLosers = myHoldings.filter(haveNegativeForecast);
+		//sellStocks(ns, projectedLosers);
+		//let actualLosers = myHoldings.filter(haveSufficientLosses);
+		//sellStocks(ns, actualLosers);
 		let breadWinners = myHoldings.filter(haveSufficientROI);
 		//ns.print(breadWinners);
 		sellStocks(ns, breadWinners);
@@ -80,14 +80,14 @@ function buyStock(ns, symbolData) {
 	if (availableFunds < 0) { return; }
 	let maxShares = ns.stock.getMaxShares(symbol);
 	let sharesAfforded = availableFunds / ns.stock.getPrice(symbol);
-	let sharesToBuy = sharesAfforded > maxShares ? maxShares : sharesAfforded;
+	let sharesToBuy = sharesAfforded > 0.25 * maxShares ? 0.25 * maxShares : sharesAfforded;
 	ns.stock.buy(symbol, sharesToBuy);
 }
 
 function haveNoShares(symbolData, symbolIndex, marketData) { return symbolData.shares < 1; }
 function haveShares(symbolData, symbolIndex, marketData) { return symbolData.shares > 0; }
 function havePositiveForecast(symbolData, symbolIndex, marketData) { return symbolData.forecast > BUYTHRESH; }
-function haveNegativeForecast(symbolData, symbolIndex, marketData) { return symbolData.forecast < 0.50; }
+function haveNegativeForecast(symbolData, symbolIndex, marketData) { return symbolData.forecast < 0.45; }
 function havePositiveGrowth(symbolData, symbolIndex, marketData) { return symbolData.earnings > 0; }
 function haveSufficientROI(symbolData, symbolIndex, marketData) { return symbolData.earnings > ROITHRESH; }
 function haveSufficientLosses(symbolData, symbolIndex, marketData) { return symbolData.earnings < LOSSTHRESH; }
