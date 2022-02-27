@@ -24,3 +24,7 @@ async function hackServer(ns, server, threads) {
         }
     }
 }
+
+export function autocomplete(data, args) {
+    return [...data.servers];
+}
