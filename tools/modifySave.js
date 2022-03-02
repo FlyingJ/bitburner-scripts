@@ -29,16 +29,16 @@ async function main(input) {
     }
 
     let hacknetNodes = [];
-    for(let i = 0; i < 128; i++) {
+    for(let i = 0; i < 32; i++) {
       let hacknetNode = {
         'ctor': 'HacknetNode',
         'data': {
           'cores': 16,
           'level': 200,
-          'moneyGainRatePerSecond': 1e11, // 30263.101477151051,
-          'onlineTimeSeconds': 24767.20000005466,
+          'moneyGainRatePerSecond': 1e16, // 30263.101477151051,
+          'onlineTimeSeconds': 0,
           'ram': 64,
-          'totalMoneyGenerated': 4677138.318787715,
+          'totalMoneyGenerated': 0,
           'name': `hacknet-node-${i}`
         }
       }
