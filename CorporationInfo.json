@@ -1,0 +1,30 @@
+{
+	"name":"DEADBEEF",
+	"funds":2.533737115129761e+21,
+	"revenue":2420530.625677454,
+	"expenses":659387.4187104512,
+	"public":true,
+	"totalShares":1200000000,
+	"numShares":1184000000,
+	"shareSaleCooldown":0,
+	"issuedShares":0,
+	"sharePrice":87197379277584.52,
+	"state":"EXPORT",
+	"divisions":[
+		{
+			"name":"AG",
+			"type":"Agriculture",
+			"awareness":228.736375219695,
+			"popularity":103.86917769977218,
+			"prodMult":34.921278068553406,
+			"research":1279.086345452546,
+			"lastCycleRevenue":2420530.625677454,
+			"lastCycleExpenses":659387.4187104512,
+			"thisCycleRevenue":24246800.3702507,
+			"thisCycleExpenses":6595251.006806998,
+			"upgrades":[0,56],
+			"cities":["Aevum","Sector-12"],
+			"products":[]
+		}
+	]
+}
