@@ -19,6 +19,6 @@ export async function main(ns) {
 		// open the dev menu
 		//props.router.toDevMenu();
 
-		props.player.karma = props.player.karma * 1000;
+		//props.player.karma = props.player.karma * 1000;
 	}
 }
