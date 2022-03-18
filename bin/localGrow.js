@@ -1,5 +1,5 @@
-const SCRIPT = '/scripts/homeHack.js';
-const HACKSCRIPT = '/scripts/hack.js';
+const SCRIPT = '/scripts/localGrow.js';
+const GROWSCRIPT = '/scripts/grow.js';
 const HOME = 'home';
 const RESERVERAM = 20; // RAM in GB to reserve for running other commands, scripts
 
@@ -16,16 +16,16 @@ export async function main(ns) {
 		return;
 	}
 
-	if (ns.scriptRunning(HACKSCRIPT, HOME)) {
-		ns.scriptKill(HACKSCRIPT, HOME);
-		ns.tprint(`Killed running instance of ${HACKSCRIPT}`);
+	if (ns.scriptRunning(GROWSCRIPT, HOME)) {
+		ns.scriptKill(GROWSCRIPT, HOME);
+		ns.tprint(`Killed running instance of ${GROWSCRIPT}`);
 	}
 
 	const freeRam = ns.getServerMaxRam(HOME) - ns.getServerUsedRam(HOME);
-	const threadRam = ns.getScriptRam(HACKSCRIPT);
+	const threadRam = ns.getScriptRam(GROWSCRIPT);
 
 	const usableRam = (RESERVERAM < freeRam) ? freeRam - RESERVERAM : 0;
 	const threads = Math.floor(usableRam / threadRam);
 
-	ns.exec(HACKSCRIPT, HOME, threads, target, threads);
+	ns.exec(GROWSCRIPT, HOME, threads, target, threads);
 }
