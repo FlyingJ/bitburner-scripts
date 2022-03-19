@@ -11,13 +11,36 @@ const employeeDistribution = {
 const warehouseSize = 56 * 1000;
 const realEstateBuyVolume = 10 * 1000 * 1000;
 
+const TICK = 3 * 1000;
+
 /** @param {NS} ns **/
 export async function main(ns) {
-	let myCorporation = ns.corporation.getCorporation();
-	myCorporation.divisions.forEach((division) => {
-		ns.tprint(division);
-	});
-	myCorporation.divisions
+	ns.disableLog('sleep');
+
+	let division = ns.corporate.getCorporation().divisions[0];
+	ns.tprint(division);
+
+	if (!division.cities.includes(city)) {
+		ns.print(`Prepping to buy office space in ${city}.`);
+		while (ns.corporate.getCorporation().funds < ns.corporation.getExpandCityCost()) { await ns.sleep(TICK); }
+		ns.corporation.expandCity(division.name, city);
+	}
+	ns.print(`Have office space in ${city}.`);
+
+	if (!ns.corporation.hasWarehouse(division.name, city)) {
+		ns.print(`Prepping to buy warehouse in ${city}.`);
+		while (ns.corporate.getCorporation().funds < ns.corporation.getPurchaseWarehouseCost()) { await ns.sleep(TICK); }
+		ns.corporation.purchaseWarehouse(division.name, city);
+	}
+	ns.print(`Have warehouse in ${city}.`);
+
+	while (ns.corporation.getWarehouse(division.name, city).size < warehouseSize) {
+		while (ns.corporate.getCorporation().funds < ns.corporate.getUpgradeWarehouseCost(division.name, city)) { await ns.sleep(TICK); }
+		ns.corporate.upgradeWarehouse(division.name, city);
+	}
+
+	
+
 }
 /*
 {
@@ -49,5 +72,15 @@ export async function main(ns) {
 			"products":[]
 		}
 	]
+}
+*/
+
+/*
+{
+	"level":1,
+	"loc":"New Tokyo",
+	"size":100,
+	"sizeUsed":0,
+	"smartSupplyEnabled":true
 }
 */
