@@ -1,0 +1,3042 @@
+{
+    "ctor": "PlayerObject",
+    "data": {
+        "hacking": 24133,
+        "hp": 2480,
+        "max_hp": 2480,
+        "strength": 22892,
+        "defense": 24705,
+        "dexterity": 12955,
+        "agility": 6997,
+        "charisma": 3757,
+        "intelligence": 45,
+        "hacking_chance_mult": 47.81826037103567,
+        "hacking_speed_mult": 32.74546948959471,
+        "hacking_money_mult": 368.5635008297813,
+        "hacking_grow_mult": 21.970371575171445,
+        "hacking_exp": 19247073170944.332,
+        "strength_exp": 24317.81232389014,
+        "defense_exp": 24317.81232389014,
+        "dexterity_exp": 51306.227051733484,
+        "agility_exp": 44614.11047976635,
+        "charisma_exp": 48041.76783169352,
+        "intelligence_exp": 1584.206143033836,
+        "hacking_mult": 88.53591350033228,
+        "strength_mult": 184.8256183041835,
+        "defense_mult": 199.45507081209547,
+        "dexterity_mult": 87.90088964643085,
+        "agility_mult": 48.94820321619903,
+        "charisma_mult": 25.859357727050767,
+        "hacking_exp_mult": 55.16341303176673,
+        "strength_exp_mult": 18.867150748913804,
+        "defense_exp_mult": 18.867150748913804,
+        "dexterity_exp_mult": 21.697223361250895,
+        "agility_exp_mult": 18.867150748913804,
+        "charisma_exp_mult": 16.037789860370413,
+        "company_rep_mult": 20.082102086029035,
+        "faction_rep_mult": 15.21371370153715,
+        "money": 8.514684530429084e+188,
+        "city": "Sector-12",
+        "location": "Alpha Enterprises",
+        "jobs": {},
+        "companyName": "",
+        "currentServer": "home",
+        "purchasedServers": [],
+        "hacknetNodes": [
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-0"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-1"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-2"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-3"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-4"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-5"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-6"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-7"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-8"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-9"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-10"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-11"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-12"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-13"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-14"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-15"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-16"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-17"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-18"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-19"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-20"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-21"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-22"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-23"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-24"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-25"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-26"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-27"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-28"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-29"
+                }
+            },
+            {
+                "ctor": "HacknetNode",
+                "data": {
+                    "cores": 16,
+                    "level": 200,
+                    "moneyGainRatePerSecond": 43021.756952431584,
+                    "onlineTimeSeconds": 8536.199999995993,
+                    "ram": 64,
+                    "totalMoneyGenerated": 367242321.69716644,
+                    "name": "hacknet-node-30"
+                }
+            }
+        ],
+        "hashManager": {
+            "ctor": "HashManager",
+            "data": {
+                "capacity": 0,
+                "hashes": 0,
+                "upgrades": {
+                    "Sell for Money": 0,
+                    "Sell for Corporation Funds": 0,
+                    "Reduce Minimum Security": 0,
+                    "Increase Maximum Money": 0,
+                    "Improve Studying": 0,
+                    "Improve Gym Training": 0,
+                    "Exchange for Corporation Research": 0,
+                    "Exchange for Bladeburner Rank": 0,
+                    "Exchange for Bladeburner SP": 0,
+                    "Generate Coding Contract": 0
+                }
+            }
+        },
+        "factions": [
+            "Illuminati",
+            "Daedalus",
+            "The Covenant",
+            "MegaCorp",
+            "Sector-12",
+            "Slum Snakes",
+            "Netburners",
+            "Bladeburners"
+        ],
+        "factionInvitations": [],
+        "queuedAugmentations": [],
+        "augmentations": [
+            {
+                "level": 1,
+                "name": "Neuralstimulator"
+            },
+            {
+                "level": 1,
+                "name": "CashRoot Starter Kit"
+            },
+            {
+                "level": 1,
+                "name": "Speech Processor Implant"
+            },
+            {
+                "level": 1,
+                "name": "Wired Reflexes"
+            },
+            {
+                "level": 1,
+                "name": "Augmented Targeting I"
+            },
+            {
+                "level": 1,
+                "name": "Augmented Targeting II"
+            },
+            {
+                "level": 1,
+                "name": "SmartSonar Implant"
+            },
+            {
+                "level": 1,
+                "name": "Combat Rib I"
+            },
+            {
+                "level": 1,
+                "name": "LuminCloaking-V1 Skin Implant"
+            },
+            {
+                "level": 1,
+                "name": "LuminCloaking-V2 Skin Implant"
+            },
+            {
+                "level": 1,
+                "name": "Hacknet Node NIC Architecture Neural-Upload"
+            },
+            {
+                "level": 1,
+                "name": "Hacknet Node Cache Architecture Neural-Upload"
+            },
+            {
+                "level": 1,
+                "name": "Hacknet Node CPU Architecture Neural-Upload"
+            },
+            {
+                "level": 1,
+                "name": "Hacknet Node Kernel Direct-Neural Interface"
+            },
+            {
+                "level": 1,
+                "name": "Hacknet Node Core Direct-Neural Interface"
+            },
+            {
+                "level": 199,
+                "name": "NeuroFlux Governor"
+            },
+            {
+                "level": 1,
+                "name": "Neuroreceptor Management Implant"
+            },
+            {
+                "level": 1,
+                "name": "Nanofiber Weave"
+            },
+            {
+                "level": 1,
+                "name": "Social Negotiation Assistant (S.N.A)"
+            },
+            {
+                "level": 1,
+                "name": "Nuoptimal Nootropic Injector Implant"
+            },
+            {
+                "level": 1,
+                "name": "ADR-V1 Pheromone Gene"
+            },
+            {
+                "level": 1,
+                "name": "Speech Enhancement"
+            },
+            {
+                "level": 1,
+                "name": "Neurotrainer I"
+            },
+            {
+                "level": 1,
+                "name": "Synaptic Enhancement Implant"
+            },
+            {
+                "level": 1,
+                "name": "PCMatrix"
+            },
+            {
+                "level": 1,
+                "name": "DataJack"
+            },
+            {
+                "level": 1,
+                "name": "The Black Hand"
+            },
+            {
+                "level": 1,
+                "name": "Enhanced Myelin Sheathing"
+            },
+            {
+                "level": 1,
+                "name": "Embedded Netburner Module"
+            },
+            {
+                "level": 1,
+                "name": "Artificial Synaptic Potentiation"
+            },
+            {
+                "level": 1,
+                "name": "Embedded Netburner Module Core Implant"
+            },
+            {
+                "level": 1,
+                "name": "CRTX42-AA Gene Modification"
+            },
+            {
+                "level": 1,
+                "name": "Neural-Retention Enhancement"
+            },
+            {
+                "level": 1,
+                "name": "Neurotrainer II"
+            },
+            {
+                "level": 1,
+                "name": "BitWire"
+            },
+            {
+                "level": 1,
+                "name": "Cranial Signal Processors - Gen I"
+            },
+            {
+                "level": 1,
+                "name": "Cranial Signal Processors - Gen II"
+            },
+            {
+                "level": 1,
+                "name": "Cranial Signal Processors - Gen III"
+            },
+            {
+                "level": 1,
+                "name": "Cranial Signal Processors - Gen IV"
+            },
+            {
+                "level": 1,
+                "name": "Embedded Netburner Module Core V2 Upgrade"
+            },
+            {
+                "level": 1,
+                "name": "BitRunners Neurolink"
+            },
+            {
+                "level": 1,
+                "name": "Artificial Bio-neural Network Implant"
+            },
+            {
+                "level": 1,
+                "name": "Cranial Signal Processors - Gen V"
+            },
+            {
+                "level": 1,
+                "name": "Neural Accelerator"
+            },
+            {
+                "level": 1,
+                "name": "The Red Pill"
+            },
+            {
+                "level": 1,
+                "name": "Embedded Netburner Module Core V3 Upgrade"
+            },
+            {
+                "level": 1,
+                "name": "Embedded Netburner Module Direct Memory Access Upgrade"
+            },
+            {
+                "level": 1,
+                "name": "NEMEAN Subdermal Weave"
+            },
+            {
+                "level": 1,
+                "name": "Synthetic Heart"
+            },
+            {
+                "level": 1,
+                "name": "Embedded Netburner Module Analyze Engine"
+            },
+            {
+                "level": 1,
+                "name": "Synfibril Muscle"
+            },
+            {
+                "level": 1,
+                "name": "Augmented Targeting III"
+            },
+            {
+                "level": 1,
+                "name": "Graphene Bone Lacings"
+            },
+            {
+                "level": 1,
+                "name": "SPTN-97 Gene Modification"
+            },
+            {
+                "level": 1,
+                "name": "Bionic Arms"
+            },
+            {
+                "level": 1,
+                "name": "Power Recirculation Core"
+            },
+            {
+                "level": 1,
+                "name": "HemoRecirculator"
+            },
+            {
+                "level": 1,
+                "name": "QLink"
+            },
+            {
+                "level": 1,
+                "name": "EsperTech Bladeburner Eyewear"
+            },
+            {
+                "level": 1,
+                "name": "The Blade's Simulacrum"
+            },
+            {
+                "level": 1,
+                "name": "EMS-4 Recombination"
+            },
+            {
+                "level": 1,
+                "name": "ORION-MKIV Shoulder"
+            },
+            {
+                "level": 1,
+                "name": "ADR-V2 Pheromone Gene"
+            },
+            {
+                "level": 1,
+                "name": "TITN-41 Gene-Modification Injection"
+            },
+            {
+                "level": 1,
+                "name": "CordiARC Fusion Reactor"
+            }
+        ],
+        "sourceFiles": [
+            {
+                "lvl": 3,
+                "n": 1
+            },
+            {
+                "lvl": 3,
+                "n": 2
+            },
+            {
+                "lvl": 3,
+                "n": 3
+            },
+            {
+                "lvl": 3,
+                "n": 4
+            },
+            {
+                "lvl": 1,
+                "n": 5
+            },
+            {
+                "lvl": 1,
+                "n": 6
+            }
+        ],
+        "numPeopleKilled": 0,
+        "karma": -27,
+        "crime_money_mult": 24.460454547308387,
+        "crime_success_mult": 14.231537191161236,
+        "isWorking": true,
+        "focus": false,
+        "workType": "Studying or Taking a class at university",
+        "workCostMult": 3,
+        "workExpMult": 2,
+        "currentWorkFactionName": "",
+        "currentWorkFactionDescription": "",
+        "workHackExpGainRate": 0,
+        "workStrExpGainRate": 0,
+        "workDefExpGainRate": 0,
+        "workDexExpGainRate": 0,
+        "workAgiExpGainRate": 0,
+        "workChaExpGainRate": 25.660463776592664,
+        "workRepGainRate": 0,
+        "workMoneyGainRate": 0,
+        "workMoneyLossRate": 192,
+        "workHackExpGained": 0,
+        "workStrExpGained": 0,
+        "workDefExpGained": 0,
+        "workDexExpGained": 0,
+        "workAgiExpGained": 0,
+        "workChaExpGained": 37335.97479494176,
+        "workRepGained": 0,
+        "workMoneyGained": -279360,
+        "createProgramName": "",
+        "createProgramReqLvl": 100,
+        "className": "taking a Leadership course",
+        "crimeType": "",
+        "timeWorked": 291000,
+        "timeWorkedCreateProgram": 0,
+        "timeNeededToCompleteWork": 72000000,
+        "work_money_mult": 20.722900851854348,
+        "hacknet_node_money_mult": 23.454534110018017,
+        "hacknet_node_purchase_cost_mult": 0.0743180183952008,
+        "hacknet_node_ram_cost_mult": 0.09714773646431472,
+        "hacknet_node_core_cost_mult": 0.09714773646431472,
+        "hacknet_node_level_cost_mult": 0.0825755759946675,
+        "hasWseAccount": false,
+        "hasTixApiAccess": false,
+        "has4SData": false,
+        "has4SDataTixApi": false,
+        "gang": null,
+        "corporation": {
+            "ctor": "Corporation",
+            "data": {
+                "name": "H3X",
+                "divisions": [
+                    {
+                        "ctor": "Industry",
+                        "data": {
+                            "name": "BEEF",
+                            "type": "Agriculture",
+                            "sciResearch": {
+                                "ctor": "Material",
+                                "data": {
+                                    "name": "Scientific Research",
+                                    "qty": 126889.16471519746,
+                                    "qlt": 0,
+                                    "dmd": 0,
+                                    "dmdR": [
+                                        0,
+                                        0
+                                    ],
+                                    "cmp": 0,
+                                    "cmpR": [
+                                        0,
+                                        0
+                                    ],
+                                    "mv": 0,
+                                    "mku": 0,
+                                    "buy": 0,
+                                    "sll": 0,
+                                    "prd": 0,
+                                    "imp": 0,
+                                    "exp": [],
+                                    "totalExp": 0,
+                                    "bCost": 0,
+                                    "sCost": 0,
+                                    "prdman": [
+                                        false,
+                                        0
+                                    ],
+                                    "sllman": [
+                                        false,
+                                        0
+                                    ],
+                                    "marketTa1": false,
+                                    "marketTa2": false,
+                                    "marketTa2Price": 0,
+                                    "maxsll": 0
+                                }
+                            },
+                            "researched": {},
+                            "reqMats": {
+                                "Water": 0.5,
+                                "Energy": 0.5
+                            },
+                            "prodMats": [
+                                "Plants",
+                                "Food"
+                            ],
+                            "products": {},
+                            "makesProducts": false,
+                            "awareness": 214684.5616251231,
+                            "popularity": 134378.28114178675,
+                            "startingCost": 40000000000,
+                            "reFac": 0.72,
+                            "sciFac": 0.5,
+                            "hwFac": 0.2,
+                            "robFac": 0.3,
+                            "aiFac": 0.3,
+                            "advFac": 0.04,
+                            "prodMult": 16.239021162563283,
+                            "upgrades": [
+                                10,
+                                81
+                            ],
+                            "state": "START",
+                            "newInd": false,
+                            "offices": {
+                                "Aevum": 0,
+                                "Chongqing": 0,
+                                "Sector-12": {
+                                    "ctor": "OfficeSpace",
+                                    "data": {
+                                        "minEne": 0,
+                                        "maxEne": 100,
+                                        "minHap": 0,
+                                        "maxHap": 100,
+                                        "maxMor": 100,
+                                        "employees": [
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "WRKrqke",
+                                                    "mor": 100,
+                                                    "hap": 99.99704161526968,
+                                                    "ene": 99.99704161526968,
+                                                    "int": 62,
+                                                    "cha": 61,
+                                                    "exp": 129.1369999999958,
+                                                    "cre": 84,
+                                                    "eff": 81,
+                                                    "sal": 1158,
+                                                    "loc": "",
+                                                    "pos": "Business"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "f8bYpg6",
+                                                    "mor": 100,
+                                                    "hap": 99.99980440349367,
+                                                    "ene": 99.99980440349367,
+                                                    "int": 51,
+                                                    "cha": 87,
+                                                    "exp": 123.13700000000118,
+                                                    "cre": 58,
+                                                    "eff": 68,
+                                                    "sal": 1068,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "LyQrboR",
+                                                    "mor": 100,
+                                                    "hap": 99.99971361391235,
+                                                    "ene": 99.99971361391235,
+                                                    "int": 84,
+                                                    "cha": 95,
+                                                    "exp": 86.13700000000118,
+                                                    "cre": 95,
+                                                    "eff": 72,
+                                                    "sal": 1203,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "1OapNti",
+                                                    "mor": 100,
+                                                    "hap": 99.9992261579238,
+                                                    "ene": 99.9992261579238,
+                                                    "int": 60,
+                                                    "cha": 63,
+                                                    "exp": 102.08900000000118,
+                                                    "cre": 84,
+                                                    "eff": 84,
+                                                    "sal": 1086,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "pxWIFsH",
+                                                    "mor": 100,
+                                                    "hap": 99.99981608334245,
+                                                    "ene": 99.99981608334245,
+                                                    "int": 53,
+                                                    "cha": 66,
+                                                    "exp": 115.08900000000118,
+                                                    "cre": 51,
+                                                    "eff": 73,
+                                                    "sal": 981,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "HAzTI2a",
+                                                    "mor": 100,
+                                                    "hap": 99.99840453379511,
+                                                    "ene": 99.99840453379511,
+                                                    "int": 94,
+                                                    "cha": 100,
+                                                    "exp": 119.08900000000118,
+                                                    "cre": 64,
+                                                    "eff": 51,
+                                                    "sal": 1191,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "BJcrFwV",
+                                                    "mor": 100,
+                                                    "hap": 99.99733375267823,
+                                                    "ene": 99.99733375267823,
+                                                    "int": 69,
+                                                    "cha": 93,
+                                                    "exp": 102.08900000000118,
+                                                    "cre": 66,
+                                                    "eff": 75,
+                                                    "sal": 1122,
+                                                    "loc": "",
+                                                    "pos": "Engineer"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "Jl27T3Z",
+                                                    "mor": 100,
+                                                    "hap": 99.99839513528923,
+                                                    "ene": 99.99839513528923,
+                                                    "int": 50,
+                                                    "cha": 92,
+                                                    "exp": 82.08900000000118,
+                                                    "cre": 98,
+                                                    "eff": 96,
+                                                    "sal": 1161,
+                                                    "loc": "",
+                                                    "pos": "Management"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "ygMGnS7",
+                                                    "mor": 100,
+                                                    "hap": 99.99811578689491,
+                                                    "ene": 99.99811578689491,
+                                                    "int": 90,
+                                                    "cha": 77,
+                                                    "exp": 86.08900000000118,
+                                                    "cre": 90,
+                                                    "eff": 76,
+                                                    "sal": 1164,
+                                                    "loc": "",
+                                                    "pos": "Business"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "eLt0bX4",
+                                                    "mor": 100,
+                                                    "hap": 99.99731823463797,
+                                                    "ene": 99.99731823463797,
+                                                    "int": 81,
+                                                    "cha": 58,
+                                                    "exp": 131.08899999998656,
+                                                    "cre": 90,
+                                                    "eff": 61,
+                                                    "sal": 1170,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "fBR2JNP",
+                                                    "mor": 100,
+                                                    "hap": 99.99962493444433,
+                                                    "ene": 99.99962493444433,
+                                                    "int": 51,
+                                                    "cha": 91,
+                                                    "exp": 103.08900000000118,
+                                                    "cre": 90,
+                                                    "eff": 69,
+                                                    "sal": 1119,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "5LAt2s4",
+                                                    "mor": 100,
+                                                    "hap": 99.99829575008819,
+                                                    "ene": 99.99829575008819,
+                                                    "int": 86,
+                                                    "cha": 78,
+                                                    "exp": 93.08900000000118,
+                                                    "cre": 78,
+                                                    "eff": 50,
+                                                    "sal": 1062,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "RvvkW3j",
+                                                    "mor": 100,
+                                                    "hap": 99.99725208034837,
+                                                    "ene": 99.99725208034837,
+                                                    "int": 87,
+                                                    "cha": 96,
+                                                    "exp": 101.08900000000118,
+                                                    "cre": 51,
+                                                    "eff": 93,
+                                                    "sal": 1191,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "KgN2lfV",
+                                                    "mor": 100,
+                                                    "hap": 99.99989583643058,
+                                                    "ene": 99.99989583643058,
+                                                    "int": 66,
+                                                    "cha": 99,
+                                                    "exp": 96.08900000000118,
+                                                    "cre": 65,
+                                                    "eff": 64,
+                                                    "sal": 1077,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "SZFp4za",
+                                                    "mor": 100,
+                                                    "hap": 99.99982188299647,
+                                                    "ene": 99.99982188299647,
+                                                    "int": 62,
+                                                    "cha": 81,
+                                                    "exp": 82.08900000000118,
+                                                    "cre": 62,
+                                                    "eff": 68,
+                                                    "sal": 972,
+                                                    "loc": "",
+                                                    "pos": "Engineer"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "Aqsmb3j",
+                                                    "mor": 100,
+                                                    "hap": 99.99751842266677,
+                                                    "ene": 99.99751842266677,
+                                                    "int": 57,
+                                                    "cha": 88,
+                                                    "exp": 106.08900000000118,
+                                                    "cre": 87,
+                                                    "eff": 74,
+                                                    "sal": 1143,
+                                                    "loc": "",
+                                                    "pos": "Research & Development"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "Y2PEis4",
+                                                    "mor": 100,
+                                                    "hap": 99.99866944926903,
+                                                    "ene": 99.99866944926903,
+                                                    "int": 83,
+                                                    "cha": 54,
+                                                    "exp": 113.08900000000118,
+                                                    "cre": 88,
+                                                    "eff": 97,
+                                                    "sal": 1212,
+                                                    "loc": "",
+                                                    "pos": "Research & Development"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "eUHKZxs",
+                                                    "mor": 100,
+                                                    "hap": 99.99943408471013,
+                                                    "ene": 99.99943408471013,
+                                                    "int": 79,
+                                                    "cha": 91,
+                                                    "exp": 128.08900000000077,
+                                                    "cre": 63,
+                                                    "eff": 67,
+                                                    "sal": 1191,
+                                                    "loc": "",
+                                                    "pos": "Research & Development"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "Ijp6odK",
+                                                    "mor": 100,
+                                                    "hap": 99.99890534435028,
+                                                    "ene": 99.99890534435028,
+                                                    "int": 72,
+                                                    "cha": 72,
+                                                    "exp": 106.91700000000098,
+                                                    "cre": 84,
+                                                    "eff": 98,
+                                                    "sal": 1221,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "mGokU5y",
+                                                    "mor": 100,
+                                                    "hap": 99.99840696861027,
+                                                    "ene": 99.99840696861027,
+                                                    "int": 50,
+                                                    "cha": 88,
+                                                    "exp": 93.91700000000098,
+                                                    "cre": 82,
+                                                    "eff": 67,
+                                                    "sal": 1065,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "LTGVrCV",
+                                                    "mor": 100,
+                                                    "hap": 99.9988139485168,
+                                                    "ene": 99.9988139485168,
+                                                    "int": 74,
+                                                    "cha": 55,
+                                                    "exp": 75.91700000000098,
+                                                    "cre": 60,
+                                                    "eff": 61,
+                                                    "sal": 900,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "qakrhYM",
+                                                    "mor": 100,
+                                                    "hap": 99.99874802968631,
+                                                    "ene": 99.99874802968631,
+                                                    "int": 51,
+                                                    "cha": 89,
+                                                    "exp": 113.91700000000098,
+                                                    "cre": 52,
+                                                    "eff": 86,
+                                                    "sal": 1098,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "y6WftmL",
+                                                    "mor": 100,
+                                                    "hap": 99.99883435753871,
+                                                    "ene": 99.99883435753871,
+                                                    "int": 56,
+                                                    "cha": 50,
+                                                    "exp": 78.91700000000098,
+                                                    "cre": 78,
+                                                    "eff": 61,
+                                                    "sal": 894,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "WDia4qL",
+                                                    "mor": 100,
+                                                    "hap": 99.99850589256772,
+                                                    "ene": 99.99850589256772,
+                                                    "int": 92,
+                                                    "cha": 89,
+                                                    "exp": 77.91700000000098,
+                                                    "cre": 94,
+                                                    "eff": 51,
+                                                    "sal": 1134,
+                                                    "loc": "",
+                                                    "pos": "Engineer"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "KSDQZfi",
+                                                    "mor": 100,
+                                                    "hap": 99.99757723390057,
+                                                    "ene": 99.99757723390057,
+                                                    "int": 84,
+                                                    "cha": 96,
+                                                    "exp": 118.91700000000098,
+                                                    "cre": 51,
+                                                    "eff": 58,
+                                                    "sal": 1146,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "RdnugoW",
+                                                    "mor": 100,
+                                                    "hap": 99.99786644829128,
+                                                    "ene": 99.99786644829128,
+                                                    "int": 98,
+                                                    "cha": 51,
+                                                    "exp": 94.91700000000098,
+                                                    "cre": 98,
+                                                    "eff": 55,
+                                                    "sal": 1113,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "UkCHklg",
+                                                    "mor": 100,
+                                                    "hap": 99.99742675776486,
+                                                    "ene": 99.99742675776486,
+                                                    "int": 92,
+                                                    "cha": 54,
+                                                    "exp": 88.91700000000098,
+                                                    "cre": 58,
+                                                    "eff": 70,
+                                                    "sal": 1011,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "hRSkyuF",
+                                                    "mor": 100,
+                                                    "hap": 99.99835233131546,
+                                                    "ene": 99.99835233131546,
+                                                    "int": 70,
+                                                    "cha": 68,
+                                                    "exp": 105.91700000000098,
+                                                    "cre": 69,
+                                                    "eff": 73,
+                                                    "sal": 1080,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "8DjPqHi",
+                                                    "mor": 100,
+                                                    "hap": 99.99938613475211,
+                                                    "ene": 99.99938613475211,
+                                                    "int": 77,
+                                                    "cha": 84,
+                                                    "exp": 90.91700000000098,
+                                                    "cre": 56,
+                                                    "eff": 60,
+                                                    "sal": 1026,
+                                                    "loc": "",
+                                                    "pos": "Operations"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "oiz9HfF",
+                                                    "mor": 100,
+                                                    "hap": 99.99998612633215,
+                                                    "ene": 99.99998612633215,
+                                                    "int": 53,
+                                                    "cha": 90,
+                                                    "exp": 75.91700000000098,
+                                                    "cre": 93,
+                                                    "eff": 99,
+                                                    "sal": 1155,
+                                                    "loc": "",
+                                                    "pos": "Engineer"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "T3aoRVB",
+                                                    "mor": 100,
+                                                    "hap": 99.99789906454986,
+                                                    "ene": 99.99789906454986,
+                                                    "int": 52,
+                                                    "cha": 61,
+                                                    "exp": 121.91700000000098,
+                                                    "cre": 63,
+                                                    "eff": 59,
+                                                    "sal": 993,
+                                                    "loc": "",
+                                                    "pos": "Research & Development"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "XEmTWWv",
+                                                    "mor": 100,
+                                                    "hap": 99.997812378303,
+                                                    "ene": 99.997812378303,
+                                                    "int": 79,
+                                                    "cha": 73,
+                                                    "exp": 99.91700000000098,
+                                                    "cre": 67,
+                                                    "eff": 96,
+                                                    "sal": 1167,
+                                                    "loc": "",
+                                                    "pos": "Research & Development"
+                                                }
+                                            },
+                                            {
+                                                "ctor": "Employee",
+                                                "data": {
+                                                    "cyclesUntilRaise": 400,
+                                                    "name": "e4yUqgj",
+                                                    "mor": 100,
+                                                    "hap": 99.99959155442578,
+                                                    "ene": 99.99959155442578,
+                                                    "int": 90,
+                                                    "cha": 81,
+                                                    "exp": 95.91700000000098,
+                                                    "cre": 88,
+                                                    "eff": 93,
+                                                    "sal": 1266,
+                                                    "loc": "",
+                                                    "pos": "Engineer"
+                                                }
+                                            }
+                                        ],
+                                        "employeeProd": {
+                                            "Operations": 54380.380515567806,
+                                            "Engineer": 14092.889883984059,
+                                            "Business": 3467.1697995734694,
+                                            "Management": 4658.459472456159,
+                                            "Research & Development": 18867.187476208306,
+                                            "total": 95466.08714778982,
+                                            "Unassigned": 0
+                                        },
+                                        "loc": "Sector-12",
+                                        "size": 33
+                                    }
+                                },
+                                "New Tokyo": 0,
+                                "Ishima": 0,
+                                "Volhaven": 0
+                            },
+                            "lastCycleRevenue": 3298588.94358705,
+                            "lastCycleExpenses": 802264.6555723982,
+                            "thisCycleRevenue": 0,
+                            "thisCycleExpenses": 365400,
+                            "warehouses": {
+                                "Aevum": 0,
+                                "Chongqing": 0,
+                                "Sector-12": {
+                                    "ctor": "Warehouse",
+                                    "data": {
+                                        "level": 1,
+                                        "sizeUsed": 500,
+                                        "smartSupplyEnabled": true,
+                                        "smartSupplyUseLeftovers": {
+                                            "Water": true,
+                                            "Energy": true,
+                                            "Food": true,
+                                            "Plants": true,
+                                            "Metal": true,
+                                            "Hardware": true,
+                                            "Chemicals": true,
+                                            "Drugs": true,
+                                            "Robots": true,
+                                            "AICores": true,
+                                            "RealEstate": true
+                                        },
+                                        "smartSupplyStore": 443.81086785572563,
+                                        "loc": "Sector-12",
+                                        "size": 1570,
+                                        "materials": {
+                                            "Water": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Water",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 65.19639363414646,
+                                                    "dmdR": [
+                                                        65,
+                                                        85
+                                                    ],
+                                                    "cmp": 51.14787552143972,
+                                                    "cmpR": [
+                                                        40,
+                                                        60
+                                                    ],
+                                                    "mv": 0.2,
+                                                    "mku": 6,
+                                                    "buy": 221.90505649700305,
+                                                    "sll": 0,
+                                                    "prd": -221.90505649700305,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 1461.717670695844,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "Energy": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Energy",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 95.33698392492202,
+                                                    "dmdR": [
+                                                        80,
+                                                        99
+                                                    ],
+                                                    "cmp": 75.00437963410153,
+                                                    "cmpR": [
+                                                        65,
+                                                        95
+                                                    ],
+                                                    "mv": 0.2,
+                                                    "mku": 6,
+                                                    "buy": 221.90505649700305,
+                                                    "sll": 0,
+                                                    "prd": -221.90505649700305,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 1989.3694495195261,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "Food": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Food",
+                                                    "qty": 0,
+                                                    "qlt": 512.7853555618663,
+                                                    "dmd": 89.51918300778614,
+                                                    "dmdR": [
+                                                        70,
+                                                        90
+                                                    ],
+                                                    "cmp": 47.822803724045265,
+                                                    "cmpR": [
+                                                        35,
+                                                        85
+                                                    ],
+                                                    "mv": 1,
+                                                    "mku": 3,
+                                                    "buy": 0,
+                                                    "sll": 443.8101129940061,
+                                                    "prd": 443.8101129940061,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 4733.630312131938,
+                                                    "sCost": "MP",
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        true,
+                                                        "MAX"
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 744879.7657591047
+                                                }
+                                            },
+                                            "Plants": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Plants",
+                                                    "qty": 0,
+                                                    "qlt": 512.7853555618663,
+                                                    "dmd": 63.065948179652445,
+                                                    "dmdR": [
+                                                        20,
+                                                        90
+                                                    ],
+                                                    "cmp": 44.28928619682896,
+                                                    "cmpR": [
+                                                        30,
+                                                        70
+                                                    ],
+                                                    "mv": 0.6,
+                                                    "mku": 3.75,
+                                                    "buy": 0,
+                                                    "sll": 443.8101129940061,
+                                                    "prd": 443.8101129940061,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 2719.442811570592,
+                                                    "sCost": "MP",
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        true,
+                                                        "MAX"
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 558628.6366650703
+                                                }
+                                            },
+                                            "Metal": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Metal",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 80,
+                                                    "dmdR": [
+                                                        75,
+                                                        85
+                                                    ],
+                                                    "cmp": 70,
+                                                    "cmpR": [
+                                                        60,
+                                                        80
+                                                    ],
+                                                    "mv": 1,
+                                                    "mku": 6,
+                                                    "buy": 0,
+                                                    "sll": 0,
+                                                    "prd": 0,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 2650,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "Hardware": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Hardware",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 86.31320077459826,
+                                                    "dmdR": [
+                                                        80,
+                                                        90
+                                                    ],
+                                                    "cmp": 80.46473858520889,
+                                                    "cmpR": [
+                                                        65,
+                                                        95
+                                                    ],
+                                                    "mv": 0.5,
+                                                    "mku": 1,
+                                                    "buy": 0,
+                                                    "sll": 0,
+                                                    "prd": 0,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 8137.092815348181,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "Chemicals": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Chemicals",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 55,
+                                                    "dmdR": [
+                                                        40,
+                                                        70
+                                                    ],
+                                                    "cmp": 60,
+                                                    "cmpR": [
+                                                        40,
+                                                        80
+                                                    ],
+                                                    "mv": 1.2,
+                                                    "mku": 2,
+                                                    "buy": 0,
+                                                    "sll": 0,
+                                                    "prd": 0,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 9000,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "Drugs": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Drugs",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 60,
+                                                    "dmdR": [
+                                                        45,
+                                                        75
+                                                    ],
+                                                    "cmp": 70,
+                                                    "cmpR": [
+                                                        40,
+                                                        99
+                                                    ],
+                                                    "mv": 1.6,
+                                                    "mku": 1,
+                                                    "buy": 0,
+                                                    "sll": 0,
+                                                    "prd": 0,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 40000,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "Robots": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Robots",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 80,
+                                                    "dmdR": [
+                                                        80,
+                                                        9
+                                                    ],
+                                                    "cmp": 80,
+                                                    "cmpR": [
+                                                        80,
+                                                        9
+                                                    ],
+                                                    "mv": 0.5,
+                                                    "mku": 1,
+                                                    "buy": 0,
+                                                    "sll": 0,
+                                                    "prd": 0,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 78612.98441867893,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "AICores": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "AI Cores",
+                                                    "qty": 0,
+                                                    "qlt": 0,
+                                                    "dmd": 86.03458125965408,
+                                                    "dmdR": [
+                                                        80,
+                                                        99
+                                                    ],
+                                                    "cmp": 80,
+                                                    "cmpR": [
+                                                        80,
+                                                        9
+                                                    ],
+                                                    "mv": 0.8,
+                                                    "mku": 0.5,
+                                                    "buy": 0,
+                                                    "sll": 0,
+                                                    "prd": 0,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 20177.067193806797,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            },
+                                            "RealEstate": {
+                                                "ctor": "Material",
+                                                "data": {
+                                                    "name": "Real Estate",
+                                                    "qty": 100000,
+                                                    "qlt": 0,
+                                                    "dmd": 26.5045866986461,
+                                                    "dmdR": [
+                                                        5,
+                                                        99
+                                                    ],
+                                                    "cmp": 28.539411819200637,
+                                                    "cmpR": [
+                                                        25,
+                                                        75
+                                                    ],
+                                                    "mv": 1.5,
+                                                    "mku": 1.5,
+                                                    "buy": 0,
+                                                    "sll": 0,
+                                                    "prd": 0,
+                                                    "imp": 0,
+                                                    "exp": [],
+                                                    "totalExp": 0,
+                                                    "bCost": 100299.0085495532,
+                                                    "sCost": 0,
+                                                    "prdman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "sllman": [
+                                                        false,
+                                                        0
+                                                    ],
+                                                    "marketTa1": false,
+                                                    "marketTa2": false,
+                                                    "marketTa2Price": 0,
+                                                    "maxsll": 0
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "New Tokyo": 0,
+                                "Ishima": 0,
+                                "Volhaven": 0
+                            }
+                        }
+                    }
+                ],
+                "funds": 7.946627893231363e+35,
+                "revenue": 3298588.94358705,
+                "expenses": 802264.6555723982,
+                "fundingRound": 0,
+                "public": true,
+                "totalShares": 1720000000,
+                "numShares": 1607000000,
+                "shareSalesUntilPriceUpdate": 1000000,
+                "shareSaleCooldown": 0,
+                "issueNewSharesCooldown": 210440,
+                "dividendPercentage": 25,
+                "dividendTaxPercentage": 35,
+                "issuedShares": 0,
+                "sharePrice": 4.1793769515982064e+26,
+                "storedCycles": 6,
+                "state": {
+                    "ctor": "CorporationState",
+                    "data": {
+                        "state": 1
+                    }
+                },
+                "unlockUpgrades": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "upgrades": [
+                    147,
+                    147,
+                    83,
+                    20,
+                    159,
+                    159,
+                    159,
+                    159,
+                    137,
+                    113
+                ],
+                "upgradeMultipliers": [
+                    5.41,
+                    15.700000000000001,
+                    1.083,
+                    1.1,
+                    16.9,
+                    16.9,
+                    16.9,
+                    16.9,
+                    2.37,
+                    6.65
+                ]
+            }
+        },
+        "bladeburner": {
+            "ctor": "Bladeburner",
+            "data": {
+                "numHosp": 4,
+                "moneyLost": 116400000,
+                "rank": 1123.433735718241,
+                "maxRank": 1123.433735718241,
+                "skillPoints": 21,
+                "totalSkillPoints": 374,
+                "teamSize": 7,
+                "teamLost": 0,
+                "hpLost": 1368,
+                "storedCycles": 5,
+                "randomEventCounter": 148,
+                "actionTimeToComplete": 12,
+                "actionTimeCurrent": 1,
+                "actionTimeOverflow": 0,
+                "action": {
+                    "ctor": "ActionIdentifier",
+                    "data": {
+                        "name": "Retirement",
+                        "type": 2
+                    }
+                },
+                "cities": {
+                    "Aevum": {
+                        "ctor": "City",
+                        "data": {
+                            "name": "Aevum",
+                            "pop": 2791282049,
+                            "popEst": 1158543544.437053,
+                            "comms": 114,
+                            "chaos": 1.477600000000005
+                        }
+                    },
+                    "Chongqing": {
+                        "ctor": "City",
+                        "data": {
+                            "name": "Chongqing",
+                            "pop": 2087721884,
+                            "popEst": 885506587.1456656,
+                            "comms": 23,
+                            "chaos": 1.0277000000000058
+                        }
+                    },
+                    "Sector-12": {
+                        "ctor": "City",
+                        "data": {
+                            "name": "Sector-12",
+                            "pop": 6233720012,
+                            "popEst": 1802932343.2882214,
+                            "comms": 64,
+                            "chaos": 0
+                        }
+                    },
+                    "New Tokyo": {
+                        "ctor": "City",
+                        "data": {
+                            "name": "New Tokyo",
+                            "pop": 1987069240,
+                            "popEst": 718985642.8851537,
+                            "comms": 10,
+                            "chaos": 1.2640315875526644
+                        }
+                    },
+                    "Ishima": {
+                        "ctor": "City",
+                        "data": {
+                            "name": "Ishima",
+                            "pop": 2451709376,
+                            "popEst": 1346406961.284574,
+                            "comms": 152,
+                            "chaos": 1.3222100799983716
+                        }
+                    },
+                    "Volhaven": {
+                        "ctor": "City",
+                        "data": {
+                            "name": "Volhaven",
+                            "pop": 2244062612,
+                            "popEst": 966341614.7469794,
+                            "comms": 91,
+                            "chaos": 3.898806999995289
+                        }
+                    }
+                },
+                "city": "Aevum",
+                "skills": {
+                    "Hyperdrive": 3,
+                    "Cyber's Edge": 2,
+                    "Tracer": 2,
+                    "Blade's Intuition": 4,
+                    "Cloak": 8,
+                    "Short-Circuit": 10,
+                    "Hands of Midas": 2,
+                    "Evasive System": 3,
+                    "Reaper": 2,
+                    "Datamancer": 4,
+                    "Digital Observer": 2,
+                    "Overclock": 11
+                },
+                "skillMultipliers": {
+                    "successChanceAll": 1.12,
+                    "successChanceStealth": 1.44,
+                    "successChanceKill": 1.55,
+                    "successChanceContract": 1.08,
+                    "successChanceOperation": 1.08,
+                    "successChanceEstimate": 1.2,
+                    "actionTime": 0.89,
+                    "effHack": 1,
+                    "effStr": 1.04,
+                    "effDef": 1.04,
+                    "effDex": 1.1648,
+                    "effAgi": 1.1648,
+                    "effCha": 1,
+                    "effInt": 1,
+                    "stamina": 1.04,
+                    "money": 1.2,
+                    "expGain": 1.3
+                },
+                "staminaBonus": 54.423199999998985,
+                "maxStamina": 1456.0712072992512,
+                "stamina": 1420.0841107610704,
+                "contracts": {
+                    "Tracking": {
+                        "ctor": "Contract",
+                        "data": {
+                            "name": "Tracking",
+                            "level": 31,
+                            "maxLevel": 31,
+                            "autoLevel": true,
+                            "baseDifficulty": 114.3677455386973,
+                            "difficultyFac": 1.02,
+                            "rewardFac": 1.041,
+                            "successes": 544,
+                            "failures": 0,
+                            "rankGain": 0.3,
+                            "rankLoss": 0,
+                            "hpLoss": 0.5,
+                            "hpLost": 0,
+                            "isStealth": true,
+                            "isKill": false,
+                            "count": 264.91562499997895,
+                            "weights": {
+                                "hack": 0,
+                                "str": 0.05,
+                                "def": 0.05,
+                                "dex": 0.35,
+                                "agi": 0.35,
+                                "cha": 0.1,
+                                "int": 0.05
+                            },
+                            "decays": {
+                                "hack": 0,
+                                "str": 0.91,
+                                "def": 0.91,
+                                "dex": 0.91,
+                                "agi": 0.91,
+                                "cha": 0.9,
+                                "int": 1
+                            },
+                            "teamCount": 0
+                        }
+                    },
+                    "Bounty Hunter": {
+                        "ctor": "Contract",
+                        "data": {
+                            "name": "Bounty Hunter",
+                            "level": 1,
+                            "maxLevel": 20,
+                            "autoLevel": true,
+                            "baseDifficulty": 272.46220735013765,
+                            "difficultyFac": 1.04,
+                            "rewardFac": 1.085,
+                            "successes": 234,
+                            "failures": 186,
+                            "rankGain": 0.9,
+                            "rankLoss": 0,
+                            "hpLoss": 1,
+                            "hpLost": 0,
+                            "isStealth": false,
+                            "isKill": true,
+                            "count": 542.7572916666367,
+                            "weights": {
+                                "hack": 0,
+                                "str": 0.15,
+                                "def": 0.15,
+                                "dex": 0.25,
+                                "agi": 0.25,
+                                "cha": 0.1,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0,
+                                "str": 0.91,
+                                "def": 0.91,
+                                "dex": 0.91,
+                                "agi": 0.91,
+                                "cha": 0.8,
+                                "int": 0.9
+                            },
+                            "teamCount": 0
+                        }
+                    },
+                    "Retirement": {
+                        "ctor": "Contract",
+                        "data": {
+                            "name": "Retirement",
+                            "level": 16,
+                            "maxLevel": 16,
+                            "autoLevel": true,
+                            "baseDifficulty": 210.14513518182534,
+                            "difficultyFac": 1.03,
+                            "rewardFac": 1.065,
+                            "successes": 151,
+                            "failures": 0,
+                            "rankGain": 0.6,
+                            "rankLoss": 0,
+                            "hpLoss": 1,
+                            "hpLost": 0,
+                            "isStealth": false,
+                            "isKill": true,
+                            "count": 670.4781249999463,
+                            "weights": {
+                                "hack": 0,
+                                "str": 0.2,
+                                "def": 0.2,
+                                "dex": 0.2,
+                                "agi": 0.2,
+                                "cha": 0.1,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0,
+                                "str": 0.91,
+                                "def": 0.91,
+                                "dex": 0.91,
+                                "agi": 0.91,
+                                "cha": 0.8,
+                                "int": 0.9
+                            },
+                            "teamCount": 0
+                        }
+                    }
+                },
+                "operations": {
+                    "Investigation": {
+                        "ctor": "Operation",
+                        "data": {
+                            "name": "Investigation",
+                            "level": 1,
+                            "maxLevel": 1,
+                            "autoLevel": true,
+                            "baseDifficulty": 393.72534084706683,
+                            "difficultyFac": 1.03,
+                            "rewardFac": 1.07,
+                            "successes": 0,
+                            "failures": 0,
+                            "rankGain": 2.2,
+                            "rankLoss": 0.2,
+                            "hpLoss": 0,
+                            "hpLost": 0,
+                            "isStealth": true,
+                            "isKill": false,
+                            "count": 495.11145833348746,
+                            "weights": {
+                                "hack": 0.25,
+                                "str": 0.05,
+                                "def": 0.05,
+                                "dex": 0.2,
+                                "agi": 0.1,
+                                "cha": 0.25,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0.85,
+                                "str": 0.9,
+                                "def": 0.9,
+                                "dex": 0.9,
+                                "agi": 0.9,
+                                "cha": 0.7,
+                                "int": 0.9
+                            },
+                            "teamCount": 0,
+                            "reqdRank": 25
+                        }
+                    },
+                    "Undercover Operation": {
+                        "ctor": "Operation",
+                        "data": {
+                            "name": "Undercover Operation",
+                            "level": 1,
+                            "maxLevel": 1,
+                            "autoLevel": true,
+                            "baseDifficulty": 471.71497984130815,
+                            "difficultyFac": 1.04,
+                            "rewardFac": 1.09,
+                            "successes": 0,
+                            "failures": 0,
+                            "rankGain": 4.4,
+                            "rankLoss": 0.4,
+                            "hpLoss": 2,
+                            "hpLost": 0,
+                            "isStealth": true,
+                            "isKill": false,
+                            "count": 574.2533333335325,
+                            "weights": {
+                                "hack": 0.2,
+                                "str": 0.05,
+                                "def": 0.05,
+                                "dex": 0.2,
+                                "agi": 0.2,
+                                "cha": 0.2,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0.8,
+                                "str": 0.9,
+                                "def": 0.9,
+                                "dex": 0.9,
+                                "agi": 0.9,
+                                "cha": 0.7,
+                                "int": 0.9
+                            },
+                            "teamCount": 0,
+                            "reqdRank": 100
+                        }
+                    },
+                    "Sting Operation": {
+                        "ctor": "Operation",
+                        "data": {
+                            "name": "Sting Operation",
+                            "level": 1,
+                            "maxLevel": 1,
+                            "autoLevel": true,
+                            "baseDifficulty": 636.4053516416021,
+                            "difficultyFac": 1.04,
+                            "rewardFac": 1.095,
+                            "successes": 0,
+                            "failures": 0,
+                            "rankGain": 5.5,
+                            "rankLoss": 0.5,
+                            "hpLoss": 2.5,
+                            "hpLost": 0,
+                            "isStealth": true,
+                            "isKill": false,
+                            "count": 519.0393750002568,
+                            "weights": {
+                                "hack": 0.25,
+                                "str": 0.05,
+                                "def": 0.05,
+                                "dex": 0.25,
+                                "agi": 0.1,
+                                "cha": 0.2,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0.8,
+                                "str": 0.85,
+                                "def": 0.85,
+                                "dex": 0.85,
+                                "agi": 0.85,
+                                "cha": 0.7,
+                                "int": 0.9
+                            },
+                            "teamCount": 0,
+                            "reqdRank": 500
+                        }
+                    },
+                    "Raid": {
+                        "ctor": "Operation",
+                        "data": {
+                            "name": "Raid",
+                            "level": 1,
+                            "maxLevel": 1,
+                            "autoLevel": true,
+                            "baseDifficulty": 738.3437039928369,
+                            "difficultyFac": 1.045,
+                            "rewardFac": 1.1,
+                            "successes": 0,
+                            "failures": 0,
+                            "rankGain": 55,
+                            "rankLoss": 2.5,
+                            "hpLoss": 50,
+                            "hpLost": 0,
+                            "isStealth": false,
+                            "isKill": true,
+                            "count": 499.7985416669369,
+                            "weights": {
+                                "hack": 0.1,
+                                "str": 0.2,
+                                "def": 0.2,
+                                "dex": 0.2,
+                                "agi": 0.2,
+                                "cha": 0,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0.7,
+                                "str": 0.8,
+                                "def": 0.8,
+                                "dex": 0.8,
+                                "agi": 0.8,
+                                "cha": 0,
+                                "int": 0.9
+                            },
+                            "teamCount": 0,
+                            "reqdRank": 3000
+                        }
+                    },
+                    "Stealth Retirement Operation": {
+                        "ctor": "Operation",
+                        "data": {
+                            "name": "Stealth Retirement Operation",
+                            "level": 1,
+                            "maxLevel": 1,
+                            "autoLevel": true,
+                            "baseDifficulty": 958.1578153476114,
+                            "difficultyFac": 1.05,
+                            "rewardFac": 1.11,
+                            "successes": 0,
+                            "failures": 0,
+                            "rankGain": 22,
+                            "rankLoss": 2,
+                            "hpLoss": 10,
+                            "hpLost": 0,
+                            "isStealth": true,
+                            "isKill": true,
+                            "count": 298.3685416670394,
+                            "weights": {
+                                "hack": 0.1,
+                                "str": 0.1,
+                                "def": 0.1,
+                                "dex": 0.3,
+                                "agi": 0.3,
+                                "cha": 0,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0.7,
+                                "str": 0.8,
+                                "def": 0.8,
+                                "dex": 0.8,
+                                "agi": 0.8,
+                                "cha": 0,
+                                "int": 0.9
+                            },
+                            "teamCount": 0,
+                            "reqdRank": 20000
+                        }
+                    },
+                    "Assassination": {
+                        "ctor": "Operation",
+                        "data": {
+                            "name": "Assassination",
+                            "level": 1,
+                            "maxLevel": 1,
+                            "autoLevel": true,
+                            "baseDifficulty": 1629.7002657428652,
+                            "difficultyFac": 1.06,
+                            "rewardFac": 1.14,
+                            "successes": 0,
+                            "failures": 0,
+                            "rankGain": 44,
+                            "rankLoss": 4,
+                            "hpLoss": 5,
+                            "hpLost": 0,
+                            "isStealth": true,
+                            "isKill": true,
+                            "count": 211.71187500011675,
+                            "weights": {
+                                "hack": 0.1,
+                                "str": 0.1,
+                                "def": 0.1,
+                                "dex": 0.3,
+                                "agi": 0.3,
+                                "cha": 0,
+                                "int": 0.1
+                            },
+                            "decays": {
+                                "hack": 0.6,
+                                "str": 0.8,
+                                "def": 0.8,
+                                "dex": 0.8,
+                                "agi": 0.8,
+                                "cha": 0,
+                                "int": 0.8
+                            },
+                            "teamCount": 0,
+                            "reqdRank": 50000
+                        }
+                    }
+                },
+                "blackops": {},
+                "logging": {
+                    "general": true,
+                    "contracts": true,
+                    "ops": true,
+                    "blackops": true,
+                    "events": true
+                },
+                "automateEnabled": false,
+                "automateActionHigh": {
+                    "ctor": "ActionIdentifier",
+                    "data": {
+                        "name": "Bounty Hunter",
+                        "type": 2
+                    }
+                },
+                "automateThreshHigh": 150,
+                "automateActionLow": {
+                    "ctor": "ActionIdentifier",
+                    "data": {
+                        "name": "Field Analysis",
+                        "type": 7
+                    }
+                },
+                "automateThreshLow": 50,
+                "consoleHistory": [
+                    "help",
+                    "help automate",
+                    "automate status",
+                    "automate stamina 100 high",
+                    "automate contract Tracking high",
+                    "automate stamina 50 low",
+                    "automate general 'Field Analysis' low",
+                    "automate status",
+                    "automate en",
+                    "automate dis",
+                    "help automate",
+                    "automate status",
+                    "automate rank 100 low",
+                    "automate status",
+                    "cls",
+                    "help",
+                    "log dis Training",
+                    "log dis general",
+                    "automate status",
+                    "automate rank 100 high",
+                    "help automate",
+                    "automate contract 'Bounty Hunter' high",
+                    "automate stamina 50 low",
+                    "automate stamina 150 high",
+                    "automate general 'Field Analysis' low",
+                    "automate status",
+                    "automate en",
+                    "stop",
+                    "automate status",
+                    "clear",
+                    "automate status",
+                    "log dis contract",
+                    "log dis events",
+                    "help log",
+                    "clear",
+                    "help",
+                    "skill",
+                    "help skill",
+                    "skill list",
+                    "help",
+                    "help start",
+                    "automate status",
+                    "log en all",
+                    "stop",
+                    "automate dis"
+                ],
+                "consoleLogs": [
+                    "[3/22 23:16:08] Tracking contract successfully completed! Gained 0.954 rank and $847.136k",
+                    "[3/22 23:16:17] Tracking contract successfully completed! Gained 0.921 rank and $847.136k",
+                    "[3/22 23:16:26] Tracking contract successfully completed! Gained 0.985 rank and $847.136k",
+                    "[3/22 23:16:35] Tracking contract successfully completed! Gained 0.846 rank and $847.136k",
+                    "[3/22 23:16:44] Tracking contract successfully completed! Gained 0.984 rank and $847.136k",
+                    "[3/22 23:16:53] Tracking contract successfully completed! Gained 1.002 rank and $847.136k",
+                    "[3/22 23:17:02] Tracking contract successfully completed! Gained 0.988 rank and $847.136k",
+                    "[3/22 23:17:11] Tracking contract successfully completed! Gained 0.865 rank and $847.136k",
+                    "[3/22 23:17:20] Tracking contract successfully completed! Gained 1.040 rank and $881.869k",
+                    "[3/22 23:17:29] Tracking contract successfully completed! Gained 0.999 rank and $881.869k",
+                    "[3/22 23:17:38] Tracking contract successfully completed! Gained 0.997 rank and $881.869k",
+                    "[3/22 23:17:47] Tracking contract successfully completed! Gained 0.930 rank and $881.869k",
+                    "[3/22 23:17:56] Tracking contract successfully completed! Gained 0.984 rank and $881.869k",
+                    "[3/22 23:18:00] Intelligence indicates that a large number of Synthoids migrated from Chongqing to some other city",
+                    "[3/22 23:18:05] Tracking contract successfully completed! Gained 0.952 rank and $881.869k",
+                    "[3/22 23:18:14] Tracking contract successfully completed! Gained 0.923 rank and $881.869k",
+                    "[3/22 23:18:23] Tracking contract successfully completed! Gained 0.927 rank and $881.869k",
+                    "[3/22 23:18:32] Tracking contract successfully completed! Gained 0.874 rank and $881.869k",
+                    "[3/22 23:18:41] Tracking contract successfully completed! Gained 1.043 rank and $881.869k",
+                    "[3/22 23:18:49] Tracking contract successfully completed! Gained 0.999 rank and $881.869k",
+                    "[3/22 23:18:57] Tracking contract successfully completed! Gained 1.018 rank and $881.869k",
+                    "[3/22 23:19:05] Tracking contract successfully completed! Gained 1.023 rank and $881.869k",
+                    "[3/22 23:19:13] Tracking contract successfully completed! Gained 0.914 rank and $881.869k",
+                    "[3/22 23:19:21] Tracking contract successfully completed! Gained 0.973 rank and $881.869k",
+                    "[3/22 23:19:29] Tracking contract successfully completed! Gained 1.018 rank and $881.869k",
+                    "[3/22 23:19:37] Tracking contract successfully completed! Gained 0.895 rank and $881.869k",
+                    "[3/22 23:19:45] Tracking contract successfully completed! Gained 0.930 rank and $881.869k",
+                    "[3/22 23:19:53] Tracking contract successfully completed! Gained 1.006 rank and $881.869k",
+                    "[3/22 23:20:01] Tracking contract successfully completed! Gained 0.992 rank and $881.869k",
+                    "[3/22 23:20:09] Tracking contract successfully completed! Gained 0.889 rank and $881.869k",
+                    "[3/22 23:20:17] Tracking contract successfully completed! Gained 1.054 rank and $881.869k",
+                    "[3/22 23:20:25] Tracking contract successfully completed! Gained 0.970 rank and $881.869k",
+                    "[3/22 23:20:33] Tracking contract successfully completed! Gained 1.009 rank and $881.869k",
+                    "[3/22 23:20:41] Tracking contract successfully completed! Gained 1.025 rank and $881.869k",
+                    "[3/22 23:20:49] Tracking contract successfully completed! Gained 0.936 rank and $881.869k",
+                    "[3/22 23:20:57] Tracking contract successfully completed! Gained 0.945 rank and $881.869k",
+                    "[3/22 23:21:05] Tracking contract successfully completed! Gained 0.877 rank and $881.869k",
+                    "[3/22 23:21:13] Tracking contract successfully completed! Gained 1.034 rank and $881.869k",
+                    "[3/22 23:21:21] Tracking contract successfully completed! Gained 0.909 rank and $881.869k",
+                    "[3/22 23:21:29] Tracking contract successfully completed! Gained 0.876 rank and $881.869k",
+                    "[3/22 23:21:37] Tracking contract successfully completed! Gained 0.899 rank and $881.869k",
+                    "[3/22 23:21:45] Tracking contract successfully completed! Gained 1.039 rank and $918.025k",
+                    "[3/22 23:21:53] Tracking contract successfully completed! Gained 1.048 rank and $918.025k",
+                    "[3/22 23:22:01] Tracking contract successfully completed! Gained 1.007 rank and $918.025k",
+                    "[3/22 23:22:09] Tracking contract successfully completed! Gained 0.969 rank and $918.025k",
+                    "[3/22 23:22:17] Tracking contract successfully completed! Gained 1.071 rank and $918.025k",
+                    "[3/22 23:22:25] Tracking contract successfully completed! Gained 0.916 rank and $918.025k",
+                    "[3/22 23:22:33] Tracking contract successfully completed! Gained 1.004 rank and $918.025k",
+                    "[3/22 23:22:41] Tracking contract successfully completed! Gained 0.912 rank and $918.025k",
+                    "[3/22 23:22:48] Tensions between Synthoids and humans lead to riots in Chongqing! Chaos increased",
+                    "[3/22 23:22:49] Tracking contract successfully completed! Gained 0.958 rank and $918.025k",
+                    "[3/22 23:22:57] Tracking contract successfully completed! Gained 0.954 rank and $918.025k",
+                    "[3/22 23:23:05] Tracking contract successfully completed! Gained 1.039 rank and $918.025k",
+                    "[3/22 23:23:13] Tracking contract successfully completed! Gained 1.012 rank and $918.025k",
+                    "[3/22 23:23:21] Tracking contract successfully completed! Gained 1.011 rank and $918.025k",
+                    "[3/22 23:23:29] Tracking contract successfully completed! Gained 0.990 rank and $918.025k",
+                    "[3/22 23:23:37] Tracking contract successfully completed! Gained 1.091 rank and $918.025k",
+                    "[3/22 23:23:45] Tracking contract successfully completed! Gained 0.983 rank and $918.025k",
+                    "[3/22 23:23:53] Tracking contract successfully completed! Gained 1.100 rank and $918.025k",
+                    "[3/22 23:24:01] Tracking contract successfully completed! Gained 1.064 rank and $1.001m",
+                    "[3/22 23:24:09] Tracking contract successfully completed! Gained 0.987 rank and $1.001m",
+                    "[3/22 23:24:27] Retirement contract successfully completed! Gained 1.242 rank and $638.729k",
+                    "[3/22 23:24:38] Retirement contract successfully completed! Gained 1.260 rank and $638.729k",
+                    "[3/22 23:24:49] Retirement contract successfully completed! Gained 1.322 rank and $638.729k",
+                    "[3/22 23:25:00] Retirement contract successfully completed! Gained 1.307 rank and $638.729k",
+                    "[3/22 23:25:11] Retirement contract successfully completed! Gained 1.423 rank and $680.246k",
+                    "[3/22 23:25:22] Retirement contract successfully completed! Gained 1.255 rank and $680.246k",
+                    "[3/22 23:25:33] Retirement contract successfully completed! Gained 1.337 rank and $680.246k",
+                    "[3/22 23:25:44] Retirement contract successfully completed! Gained 1.409 rank and $680.246k",
+                    "[3/22 23:25:55] Retirement contract successfully completed! Gained 1.268 rank and $680.246k",
+                    "[3/22 23:26:06] Retirement contract successfully completed! Gained 1.294 rank and $680.246k",
+                    "[3/22 23:26:17] Retirement contract successfully completed! Gained 1.371 rank and $680.246k",
+                    "[3/22 23:26:28] Retirement contract successfully completed! Gained 1.401 rank and $680.246k",
+                    "[3/22 23:26:39] Retirement contract successfully completed! Gained 1.422 rank and $680.246k",
+                    "[3/22 23:26:50] Retirement contract successfully completed! Gained 1.240 rank and $680.246k",
+                    "[3/22 23:27:01] Retirement contract successfully completed! Gained 1.493 rank and $680.246k",
+                    "[3/22 23:27:12] Retirement contract successfully completed! Gained 1.264 rank and $680.246k",
+                    "[3/22 23:27:23] Retirement contract successfully completed! Gained 1.355 rank and $680.246k",
+                    "[3/22 23:27:34] Retirement contract successfully completed! Gained 1.412 rank and $680.246k",
+                    "[3/22 23:27:41] Intelligence indicates that a large number of Synthoids migrated from Sector-12 to some other city",
+                    "[3/22 23:27:45] Retirement contract successfully completed! Gained 1.276 rank and $680.246k",
+                    "[3/22 23:27:56] Retirement contract successfully completed! Gained 1.335 rank and $680.246k",
+                    "[3/22 23:28:08] Retirement contract successfully completed! Gained 1.355 rank and $724.462k",
+                    "[3/22 23:28:20] Retirement contract successfully completed! Gained 1.364 rank and $724.462k",
+                    "[3/22 23:28:32] Retirement contract successfully completed! Gained 1.487 rank and $724.462k",
+                    "[3/22 23:28:44] Retirement contract successfully completed! Gained 1.453 rank and $724.462k",
+                    "[3/22 23:28:56] Retirement contract successfully completed! Gained 1.428 rank and $724.462k",
+                    "[3/22 23:29:08] Retirement contract successfully completed! Gained 1.550 rank and $724.462k",
+                    "[3/22 23:29:20] Retirement contract successfully completed! Gained 1.353 rank and $724.462k",
+                    "[3/22 23:29:32] Retirement contract successfully completed! Gained 1.465 rank and $724.462k",
+                    "[3/22 23:29:44] Retirement contract successfully completed! Gained 1.584 rank and $724.462k",
+                    "[3/22 23:29:56] Retirement contract successfully completed! Gained 1.465 rank and $724.462k",
+                    "[3/22 23:30:08] Retirement contract successfully completed! Gained 1.355 rank and $724.462k",
+                    "[3/22 23:30:20] Retirement contract successfully completed! Gained 1.436 rank and $724.462k",
+                    "[3/22 23:30:32] Retirement contract successfully completed! Gained 1.551 rank and $724.462k",
+                    "[3/22 23:30:44] Retirement contract successfully completed! Gained 1.559 rank and $724.462k",
+                    "[3/22 23:30:56] Retirement contract successfully completed! Gained 1.576 rank and $724.462k",
+                    "[3/22 23:31:07] Retirement contract successfully completed! Gained 1.525 rank and $724.462k",
+                    "[3/22 23:31:18] Retirement contract successfully completed! Gained 1.535 rank and $724.462k",
+                    "[3/22 23:31:30] Retirement contract successfully completed! Gained 1.446 rank and $771.552k"
+                ]
+            }
+        },
+        "bladeburner_max_stamina_mult": 1,
+        "bladeburner_stamina_gain_mult": 1.02,
+        "bladeburner_analysis_mult": 1.05,
+        "bladeburner_success_chance_mult": 1.103336,
+        "sleeves": [],
+        "resleeves": [],
+        "sleevesFromCovenant": 0,
+        "bitNodeN": 6,
+        "lastUpdate": 1648006292415,
+        "lastSave": 1648006276819,
+        "totalPlaytime": 6921495800,
+        "playtimeSinceLastAug": 8582200,
+        "playtimeSinceLastBitnode": 175250800,
+        "moneySourceA": {
+            "ctor": "MoneySourceTracker",
+            "data": {
+                "bladeburner": 86756762.31263568,
+                "casino": 0,
+                "class": -279360,
+                "codingcontract": 0,
+                "corporation": -6.723258067909577e+34,
+                "crime": 0,
+                "gang": 0,
+                "hacking": 9838825204565.889,
+                "hacknet": 11384511972.890478,
+                "hacknet_expenses": -17967252563.859444,
+                "hospitalization": 0,
+                "infiltration": 0,
+                "sleeves": 0,
+                "stock": 0,
+                "total": -6.723258067909577e+34,
+                "work": 0,
+                "servers": 0,
+                "other": -305700000,
+                "augmentations": 0
+            }
+        },
+        "moneySourceB": {
+            "ctor": "MoneySourceTracker",
+            "data": {
+                "bladeburner": 591927582.3585697,
+                "casino": 0,
+                "class": -2832072,
+                "codingcontract": 0,
+                "corporation": -1.168006563466337e+35,
+                "crime": 553753.9448400958,
+                "gang": 0,
+                "hacking": 1771923003644600,
+                "hacknet": 56073168687.59436,
+                "hacknet_expenses": -57344037626.61258,
+                "hospitalization": -116400000,
+                "infiltration": 0,
+                "sleeves": 0,
+                "stock": 0,
+                "total": -2.93660710085822e+49,
+                "work": 2471719061.8277926,
+                "servers": -14641294492050278000,
+                "other": -2163900000,
+                "augmentations": -2.936607100858209e+49
+            }
+        },
+        "scriptProdSinceLastAug": 9838825204565.889,
+        "exploits": [
+            "N00dles",
+            "EditSaveFile",
+            "YoureNotMeantToAccessThis"
+        ],
+        "achievements": [
+            {
+                "ID": "CYBERSEC",
+                "unlockedOn": 1642198554797
+            },
+            {
+                "ID": "NITESEC",
+                "unlockedOn": 1642198554810
+            },
+            {
+                "ID": "THE_BLACK_HAND",
+                "unlockedOn": 1642198554813
+            },
+            {
+                "ID": "BITRUNNERS",
+                "unlockedOn": 1642198554816
+            },
+            {
+                "ID": "BRUTESSH.EXE",
+                "unlockedOn": 1642198554819
+            },
+            {
+                "ID": "FTPCRACK.EXE",
+                "unlockedOn": 1642198554823
+            },
+            {
+                "ID": "RELAYSMTP.EXE",
+                "unlockedOn": 1642198554826
+            },
+            {
+                "ID": "HTTPWORM.EXE",
+                "unlockedOn": 1642198554830
+            },
+            {
+                "ID": "SQLINJECT.EXE",
+                "unlockedOn": 1642198554834
+            },
+            {
+                "ID": "FORMULAS.EXE",
+                "unlockedOn": 1642198554837
+            },
+            {
+                "ID": "INSTALL_1",
+                "unlockedOn": 1642198554840
+            },
+            {
+                "ID": "NS2",
+                "unlockedOn": 1642198554843
+            },
+            {
+                "ID": "FROZE",
+                "unlockedOn": 1642198554847
+            },
+            {
+                "ID": "SCRIPTS_30",
+                "unlockedOn": 1642198554849
+            },
+            {
+                "ID": "FIRST_HACKNET_NODE",
+                "unlockedOn": 1642198554853
+            },
+            {
+                "ID": "MAX_HACKNET_NODE",
+                "unlockedOn": 1642198554855
+            },
+            {
+                "ID": "HACKNET_NODE_10M",
+                "unlockedOn": 1642198554858
+            },
+            {
+                "ID": "DONATION",
+                "unlockedOn": 1642198554862
+            },
+            {
+                "ID": "TOR",
+                "unlockedOn": 1642198554865
+            },
+            {
+                "ID": "4S",
+                "unlockedOn": 1642198554867
+            },
+            {
+                "ID": "DAEDALUS",
+                "unlockedOn": 1642198794816
+            },
+            {
+                "ID": "SF1.1",
+                "unlockedOn": 1642199274811
+            },
+            {
+                "ID": "SCRIPT_32GB",
+                "unlockedOn": 1642199274820
+            },
+            {
+                "ID": "DRAIN_SERVER",
+                "unlockedOn": 1642738642559
+            },
+            {
+                "ID": "TRAVEL",
+                "unlockedOn": 1642962148551
+            },
+            {
+                "ID": "N00DLES",
+                "unlockedOn": 1643223570990
+            },
+            {
+                "ID": "DISCOUNT",
+                "unlockedOn": 1643342251031
+            },
+            {
+                "ID": "WORKOUT",
+                "unlockedOn": 1643342310977
+            },
+            {
+                "ID": "HOSPITALIZED",
+                "unlockedOn": 1643343810986
+            },
+            {
+                "ID": "GANG",
+                "unlockedOn": 1643492387763
+            },
+            {
+                "ID": "FULL_GANG",
+                "unlockedOn": 1643637407795
+            },
+            {
+                "ID": "GANG_MEMBER_POWER",
+                "unlockedOn": 1643638067757
+            },
+            {
+                "ID": "REPUTATION_10M",
+                "unlockedOn": 1643783614558
+            },
+            {
+                "ID": "SF2.1",
+                "unlockedOn": 1643950774572
+            },
+            {
+                "ID": "CORPORATION",
+                "unlockedOn": 1644029434551
+            },
+            {
+                "ID": "EDITSAVEFILE",
+                "unlockedOn": 1644548478251
+            },
+            {
+                "ID": "30_HACKNET_NODE",
+                "unlockedOn": 1644616585324
+            },
+            {
+                "ID": "MAX_CORES",
+                "unlockedOn": 1644631058379
+            },
+            {
+                "ID": "MONEY_1Q",
+                "unlockedOn": 1644894384975
+            },
+            {
+                "ID": "SF3.1",
+                "unlockedOn": 1644978324968
+            },
+            {
+                "ID": "MAX_RAM",
+                "unlockedOn": 1645322321671
+            },
+            {
+                "ID": "CORPORATION_REAL_ESTATE",
+                "unlockedOn": 1645480601873
+            },
+            {
+                "ID": "CORPORATION_BRIBE",
+                "unlockedOn": 1645636901815
+            },
+            {
+                "ID": "SF4.1",
+                "unlockedOn": 1645668283454
+            },
+            {
+                "ID": "QUEUE_40",
+                "unlockedOn": 1646158366608
+            },
+            {
+                "ID": "DEVMENU",
+                "unlockedOn": 1646194895641
+            },
+            {
+                "ID": "NEUROFLUX_255",
+                "unlockedOn": 1646235482188
+            },
+            {
+                "ID": "FAST_BN",
+                "unlockedOn": 1646236682177
+            },
+            {
+                "ID": "SF5.1",
+                "unlockedOn": 1647623945870
+            },
+            {
+                "ID": "CHALLENGE_BN6",
+                "unlockedOn": 1647803738825
+            },
+            {
+                "ID": "INDECISIVE",
+                "unlockedOn": 1647807388849
+            },
+            {
+                "ID": "SF6.1",
+                "unlockedOn": 1647831088850
+            },
+            {
+                "ID": "BLADEBURNER_DIVISION",
+                "unlockedOn": 1647914608833
+            },
+            {
+                "ID": "THE_COVENANT",
+                "unlockedOn": 1647950068818
+            },
+            {
+                "ID": "ILLUMINATI",
+                "unlockedOn": 1647967048840
+            },
+            {
+                "ID": "COMBAT_3000",
+                "unlockedOn": 1647986668822
+            }
+        ],
+        "terminalCommandHistory": [
+            "scan-analyze 10",
+            "home",
+            "run /scripts/boostCorpUpgrades.js",
+            "nano /scripts/boostCorpUpgrades.js",
+            "rm /scripts/boostCorpUpgrades.js",
+            "run /scripts/goFundCorp.js",
+            "ls /bin",
+            "nano /bin/corporationManager.js",
+            "run /bin/corporationManager.js",
+            "run /scripts/autoRemoteHack.js",
+            "run /scripts/localHack.js lexo-corp",
+            "scan-analyze 10",
+            "run /scripts/localHack.js taiyang-digital",
+            "ps",
+            "tail 325",
+            "run /scripts/autoHack.js",
+            "run /scripts/goFundMe.js",
+            "run /scripts/hacknetManager.js",
+            "run /scripts/localHack.js megacorp",
+            "run /scripts/autoHack.js",
+            "buy -a",
+            "run /scripts/autoHack.js",
+            "run /scripts/serverStatus.js",
+            "run /scripts/hax.js dash",
+            "run /scripts/localHack.js megacorp",
+            "ps",
+            "tail 252",
+            "run /scripts/purchaseServers.js",
+            "run /scripts/autoRemoteHack.js",
+            "run /scripts/autoHack.js",
+            "run /scripts/goFundMe.js",
+            "buy -a",
+            "run /scripts/hacknetManager.js",
+            "nano /scripts/purchaseServers.js",
+            "cp /scripts/purchaseServers.js /bin/farmer.js",
+            "nano /bin/farmer.js",
+            "nano /scripts/purchaseServers.js",
+            "nano /scripts/autoRemoteHack.js",
+            "ls",
+            "ls /scripts",
+            "ps",
+            "run /scripts/autoHack.js",
+            "run /scripts/localHack.js megacorp",
+            "ps",
+            "tail 112",
+            "ps",
+            "ls /scripts",
+            "cp /scripts/findProperties.js /bin/findProperties.js",
+            "nano /bin/findProperties.js",
+            "run /bin/findProperties.js"
+        ],
+        "identifier": "10ba7f5ef0e5c2",
+        "factionWorkType": "Faction Security Work",
+        "committingCrimeThruSingFn": false,
+        "singFnCrimeWorkerScript": null
+    }
+}
