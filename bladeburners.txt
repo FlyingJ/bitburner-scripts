@@ -1,0 +1,22 @@
+General
+	Training
+	Field Analysis
+	Recruitment
+	Diplomacy
+	Hyperbolic Regeneration Chamber
+	Incite Violence
+Contracts
+	Tracking
+	Bounty Hunter
+	Retirement
+Operations
+	Investigation
+	Undercover Operation
+	Sting Operation
+	Raid
+	Stealth Retirement Operation
+	Assassination
+BlackOps
+	Operation Typhoon
+	
+Skills
