@@ -2,15 +2,15 @@ const workTypes = {
 	ops: {
 		name: 'Field Work',
 		skills: ['hacking', 'strength', 'defense', 'dexterity', 'agility', 'charisma'],
-	}
+	},
 	dev: {
 		name: 'Hacking Contracts',
 		skills: ['hacking'],
-	}
+	},
 	sec: {
 		name: 'Security Work',
 		skills: ['hacking', 'strength', 'defense', 'dexterity', 'agility'],
-	}
+	},
 }
 
 const FACTIONS = [
@@ -50,42 +50,48 @@ const FACTIONS = [
 ];
 
 export function autocomplete(data, args) {
-	return FACTIONS;
+	return [...data.flags];
 }
 
+export function validEnum(value, validValues) {
+	return validValues.includes(value);
+}
+
+export function getAllFactions() {
+		return FACTIONS;
+	}
+	
 
 /** @param {NS} ns */
 export async function main(ns) {
-
 	function goalAchieved(ctx) {
-
+		let achieved = true;
+		workTypes[ctx.work]['skills'].forEach((skill) => {
+			achieved &= (ns.getPlayer()[skill] > ctx.goal);
+		});
+		return achieved;
 	}
 
-	function getJoinedFactions() {
-		return ns.getPlayer().factions;
-	}
-	function getAllFactions() {
-		return FACTIONS;
-	}
-
-	const ctx = ns.flags([
+	const schema = [
 		['faction', 'Sector-12'],
 		['goal', 100],
-		['work', 'hack'],
+		['work', 'dev'],
 		['focus', false],
 		['period', 10 * 1000],
-	]);
+	];
+	const ctx = ns.flags(schema);
 
-	let player = {};
+	// input validation
+	let validInput = validEnum(ctx.faction, getAllFactions()) &&
+		validEnum(ctx.work, Object.getOwnPropertyNames(workTypes));
+	if (!validInput) { ns.tprint('You suck'); ns.exit(); }
+
+	// cycle faction work until goal achieved
 	do {
-		player = ns.getPlayer();
-		ns.workForFaction(ctx.faction, ctx.work, ctx.focus);
+		ns.workForFaction(ctx.faction, workTypes[ctx.work].name, ctx.focus);
 		await ns.sleep(ctx.period);
-	} while ( ! goalAchieved(ctx) );
-		player.agility < ctx.goal &&
-		player.dexterity < goal &&
-		player.defense < goal &&
-		player.strength < goal
-	)
+	} while (!goalAchieved(ctx));
+
+	ns.tprint('Goal Achieved!');
 	ns.stopAction();
 }

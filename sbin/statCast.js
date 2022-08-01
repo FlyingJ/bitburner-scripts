@@ -3,12 +3,15 @@ export async function main(ns) {
 	// so that when script is killed, these line disappear
 	ns.atExit(() => { hook0.innerHTML = ""; hook1.innerHTML = ""; });
 
-    // const doc = document; // This is expensive! (25GB RAM) Perhaps there's a way around it? ;)
-    // can use this to get rid of that cost too
-    const doc = eval("document");
+    // // const doc = document; // This is expensive! (25GB RAM) Perhaps there's a way around it? ;)
+    // // can use this to get rid of that cost too
+    // const doc = eval("document");
 
-    const hook0 = doc.getElementById('overview-extra-hook-0');
-    const hook1 = doc.getElementById('overview-extra-hook-1');
+    // const hook0 = doc.getElementById('overview-extra-hook-0');
+    // const hook1 = doc.getElementById('overview-extra-hook-1');
+
+    const hook0 = eval("document.getElementById('overview-extra-hook-0')");
+    const hook1 = eval("document.getElementById('overview-extra-hook-1')");
     while (true) {
         try {
             const headers = []
@@ -30,20 +33,3 @@ export async function main(ns) {
         await ns.sleep(1000);
     }
 }
-
-
-/*
-const doc = eval("document");
-
-I also added :
-ns.atExit(() => { hook0.innerHTML = ""; hook1.innerHTML = ""; });
-
-
-//const doc = document;
-//const hook0 = doc.getElementById('overview-extra-hook-0');
-//const hook1 = doc.getElementById('overview-extra-hook-1');
-const hook0 = eval("document.getElementById('overview-extra-hook-0')");
-const hook1 = eval("document.getElementById('overview-extra-hook-1')");
-
-That delete the cost of document.
-*/
