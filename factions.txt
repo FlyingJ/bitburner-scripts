@@ -1,0 +1,77 @@
+
+
+'AllFactions' : [
+	'Megacorporations': [
+		{'name': 'ECorp','city': 'Aevum', 'requiredResource': 'reputation', 'requiredAmount': 200000},
+		{'name': 'MegaCorp','city': 'Sector-12', 'requiredResource': 'reputation', 'requiredAmount': 200000},
+		{'name': 'KuaiGong International','city': 'Chongqing', 'requiredResource': 'reputation', 'requiredAmount': 200000},
+		{'name': 'Four Sigma','city': 'Sector-12', requiredResource: 'reputation', 'requiredAmount': 200000},
+		{'name': 'NWO','city': 'Volhaven', requiredResource: 'reputation', 'requiredAmount': 200000},
+		{'name': 'Blade Industries','city': 'Sector-12', requiredResource: 'reputation', 'requiredAmount': 200000},
+		{'name': 'OmniTek Incorporated','city': 'Volhaven', requiredResource: 'reputation', 'requiredAmount': 200000},
+		{'name': 'Bachman & Associates','city': 'Aevum', requiredResource: 'reputation', 'requiredAmount': 200000},
+		{'name': 'Clarke Incorporated','city': 'Aevum', requiredResource: 'reputation', 'requiredAmount': 200000},
+		{'name': 'Fulcrum Secret Technologies','city': 'Aevum', requiredResource: 'reputation', 'requiredAmount': 250000},
+	]
+]
+
+
+
+
+
+
+// Amount of negative karma needed to manage a gang in BitNodes other than 2
+const GangKarmaRequirement = -54000;
+
+export function canAccessGang(this: IPlayer): boolean {
+  if (this.bitNodeN === 2) {
+    return true;
+  }
+  if (SourceFileFlags[2] <= 0) {
+    return false;
+  }
+
+  return this.karma <= GangKarmaRequirement;
+}
+
+
+
+
+
+
+
+Megacorporations    | Faction Name   | Requirements                            | Joining this Faction prevents |
+|                     |                |                                         | you from joining:             |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | ECorp          | * Have 200k reputation with             |                               |
+|                     |                |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | MegaCorp       | * Have 200k reputation with             |                               |
+|                     |                |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | KuaiGong       | * Have 200k reputation with             |                               |
+|                     | International  |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | Four Sigma     | * Have 200k reputation with             |                               |
+|                     |                |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | NWO            | * Have 200k reputation with             |                               |
+|                     |                |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | Blade          | * Have 200k reputation with             |                               |
+|                     | Industries     |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | OmniTek        | * Have 200k reputation with             |                               |
+|                     | Incorporated   |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | Bachman &      | * Have 200k reputation with             |                               |
+|                     | Associates     |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | Clarke         | * Have 200k reputation with             |                               |
+|                     | Incorporated   |   the Corporation                       |                               |
++                     +----------------+-----------------------------------------+-------------------------------+
+|                     | Fulcrum Secret | * Have 250k reputation with             |                               |
+|                     | Technologies   |   the Corporation                       |                               |
+|                     |                | * Install a backdoor on the             |                               |
+|                     |                |   fulcrumassets server                  |                               |
++---------------------+----------------+-----------------------------------------+-----
