@@ -1,7 +1,7 @@
 /** @param {NS} ns **/
 
 const getProps = (obj) =>
-	Object.entries(obj).find(entry => entry[0]?.startsWith(`__reactProps`))?.[1]?.children?.props;
+Object.entries(obj).find(entry => entry[0]?.startsWith(`__reactProps`))?.[1]?.children?.props;
 
 export async function main(ns) {
 	let boxes = Array.from(eval(`document`).querySelectorAll(`[class*=MuiBox-root]`));
@@ -11,9 +11,9 @@ export async function main(ns) {
 		// show classname to use
 		// let className = boxes.find(x => getProps(x)?.player).className;
 		// ns.tprintf(`INFO className: ${className}`);
-
-let obsceneValue = 1e12;
-			props.player.gainIntelligenceExp(obsceneValue);
+		
+		let obsceneValue = 1e12;
+		props.player.gainIntelligenceExp(obsceneValue);
 		// get some bonuses
 		//props.player.money = props.player.money * 1111;
 		//props.player.hacking_exp = props.player.hacking_exp * 1111;

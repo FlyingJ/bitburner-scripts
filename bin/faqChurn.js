@@ -1,44 +1,17 @@
-const WORKS = [`Hacking Contracts`, `Field Work`, `Security Work`];
-const WORK = `Security Work`;
-const statSets = {
-	'field': ['hacking', 'strength', 'defense', 'dexterity', 'agility', 'charisma'],
-	'hacking': ['hacking'],
-	'security': ['hacking', 'strength', 'defense', 'dexterity', 'agility'],
-}
-
-/** @param {NS} ns */
-export async function main(ns) {
-	function getJoinedFactions() {
-		return ns.getPlayer().factions;
+const workTypes = {
+	ops: {
+		name: 'Field Work',
+		skills: ['hacking', 'strength', 'defense', 'dexterity', 'agility', 'charisma'],
 	}
-	function getAllFactions() {
-		return FACTIONS;
+	dev: {
+		name: 'Hacking Contracts',
+		skills: ['hacking'],
 	}
-
-	const flags = ns.flags([
-		['faction', 'Sector-12'],
-		['work', 'Hacking Contracts'],
-		['focus', false],
-		['period', 10 * 1000],
-	]);
-	let faction = 'Sector-12';
-	let workType = 'Security Work';
-	let focus = false;
-	let period = 10 * 1000;
-	ns.workForFaction(faction, workType, focus);
-	let player = {};
-	do {
-		player = ns.getPlayer();
-		await ns.sleep(duration);
-	} while (
-		player.agility < 100 &&
-		player.dexterity < 100 &&
-		player.defense < 100 &&
-		player.strength < 100
-	)
-	ns.stopAction();
+	sec: {
+		name: 'Security Work',
+		skills: ['hacking', 'strength', 'defense', 'dexterity', 'agility'],
+	}
 }
-
 
 const FACTIONS = [
 	`Illuminati`,
@@ -76,7 +49,43 @@ const FACTIONS = [
 	`Church of the Machine God`,
 ];
 
-
 export function autocomplete(data, args) {
 	return FACTIONS;
+}
+
+
+/** @param {NS} ns */
+export async function main(ns) {
+
+	function goalAchieved(ctx) {
+
+	}
+
+	function getJoinedFactions() {
+		return ns.getPlayer().factions;
+	}
+	function getAllFactions() {
+		return FACTIONS;
+	}
+
+	const ctx = ns.flags([
+		['faction', 'Sector-12'],
+		['goal', 100],
+		['work', 'hack'],
+		['focus', false],
+		['period', 10 * 1000],
+	]);
+
+	let player = {};
+	do {
+		player = ns.getPlayer();
+		ns.workForFaction(ctx.faction, ctx.work, ctx.focus);
+		await ns.sleep(ctx.period);
+	} while ( ! goalAchieved(ctx) );
+		player.agility < ctx.goal &&
+		player.dexterity < goal &&
+		player.defense < goal &&
+		player.strength < goal
+	)
+	ns.stopAction();
 }
